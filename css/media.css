@@ -1,0 +1,43 @@
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .nav:hover {
+    color: green;
+  }
+  .nav:hover .sidebar-main {
+    background-color: white !important;
+  }
+  .aboutme {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  .aboutme .textbox, .aboutme .qualification {
+    width: 45%;
+    margin: 20px;
+  }
+  .self-img {
+    display: flex !important;
+    justify-content: center;
+  }
+  .project {
+    width: 45% !important;
+    margin: 20px 20px !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    display: flex !important;
+    max-width: 340px;
+  }
+  .side-menu {
+    display: flex !important;
+    max-width: 340px;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */

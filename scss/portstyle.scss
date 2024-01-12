@@ -1,57 +1,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;900&display=swap');
-
-
-
-@media screen and (min-width: 768px){
-.container{
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-  .project{
-    width: 45% !important;
-    margin: 20px 20px !important;
-    
-  }
-}
-.contact, .qualification{
-    max-width: 741px;
-}
-
-
-
-@media screen and (min-width: 992px){
-    header{
-    display: flex !important;
-    max-width: 340px;
-}
-    .side-menu{
-    display: flex !important;
-    max-width: 340px;
-
-}
-.nav:hover{
-    color:green;
-    .sidebar-main{
-background-color: white !important;
-  }
-}
-.aboutme{
-
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    & .textbox, .qualification{
-        width: 45%;
-        margin: 20px;
-    }
-}
-
-}
-
-
+@import "media";
 
 *{
     width: 100%;
@@ -81,6 +31,7 @@ background-color: white !important;
     align-items: center;
     display:grid;
     letter-spacing: 4px;
+  
 }
 
 ::-webkit-scrollbar {
@@ -91,6 +42,7 @@ background-color: white !important;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    background-color: black;
 }
 .hidden{
     display: none;
@@ -133,35 +85,35 @@ h2{
             backgroundmove 16s linear infinite;
 }
 .star1{
-    background: url("file:///C:/xampp/htdocs/Portfolio%20Project/images/stars/star1.png");
+    background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star1.png);
     animation-delay: 0s;
 }
 .star2{
-    background: url("file:///C:/xampp/htdocs/Portfolio%20Project/images/stars/star2.png");
+    background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star2.png);
     animation-delay: -1s;
 }
 .star3{
-    background: url("file:///C:/xampp/htdocs/Portfolio%20Project/images/stars/star3.png");
+    background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star3.png);
     animation-delay: -2s;
 }
 .star4{
-    background: url("file:///C:/xampp/htdocs/Portfolio%20Project/images/stars/star4.png");
+    background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star4.png);
     animation-delay: -3s;
 }
 .star5{
-    background: url("file:///C:/xampp/htdocs/Portfolio%20Project/images/stars/star5.png");
+    background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star5.png);
     animation-delay: -4s;
 }
 .star6{
-    background: url("file:///C:/xampp/htdocs/Portfolio%20Project/images/stars/star6.png");
+    background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star6.png);
     animation-delay: -5s;
 }
 .star7{
-    background: url("file:///C:/xampp/htdocs/Portfolio%20Project/images/stars/star7.png");
+    background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star7.png);
     animation-delay: -6s;
 }
 .star8{
-    background: url("file:///C:/xampp/htdocs/Portfolio%20Project/images/stars/star8.png");
+    background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star8.png);
     animation-delay: -7s;
 }
 
@@ -265,7 +217,6 @@ width: 100%;
 height: 100%;   
 flex-direction: column;
 // justify-content: space-between;
-
 overflow: hidden;
 text-align: center;
 border-radius: 0 50px 50px 0;
@@ -492,9 +443,9 @@ display: flex;
     //----------------------------------------------------------------------------------About Me------------------------------------------------------------------------------------------------------------------------------------------
     .main{
         background-color: $color-primary;
-        color: $color-green;
-        padding: 20px 20px 20px 20px;
-        overflow-x: hidden !important;
+        color: $color-secondary;
+        padding: 50px 20px 50px 20px;
+        overflow-x: hidden;
         justify-content: center;
     }
     .aboutme{
@@ -502,26 +453,41 @@ display: flex;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 50px 0px;
+
     }
     .textbox{
         border-radius: 40px;
-        padding: 10px 20px;
+        padding: 10px 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 20px 0;
-        border-radius: 25px;
-        padding: 10px 20px;
+        background-color: $color-grey;
+        position: relative;
+    }
+
+    .self-img{
+        display: none;
+       
+        & img{
+            border-radius: 50%;
+            width: 200px; 
+            height: 200px;
+            object-fit: cover;
+            opacity: 80%;
+            margin: 30px;
+            box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
+        }
+    }
+    .self{
+        margin: 20px 0;
+        padding: 20px;
         display: flex;
         flex-direction: column;
-        background-color: $color-grey;
+        background-color: $color-primary;
         justify-content: center;
-        & a:hover{
-            text-decoration: underline;
-        }
- 
     }
-   
     .qualification{
         margin: 20px 0;
         border-radius: 25px;
@@ -536,6 +502,8 @@ display: flex;
         float: left;
         width: 80%;
         background-color: lighten($color-grey, 20%);
+        border-radius: 20px;
+    padding: 0px 20px;
      }
      .answer{
         justify-content: right;
@@ -544,9 +512,11 @@ display: flex;
         color:$color-primary;
         width: 80%;
         text-align: center;
+        border-radius: 20px;
+        padding: 20px 20px;
      }
 .chat-img{
-    margin: 60px 0 20px 10px;
+    margin: 20px 0 20px 10px;
     border-radius: 50%;
     border: none;
     width: 50px;
@@ -695,9 +665,9 @@ iframe{
       //------------------------------------------------------------------------------------Contact-Me----------------------------------------------------------------------------------------------------------------------
 
       .contact{
-        height:100vh;
         margin-left: auto;
     margin-right: auto;
+    padding: 50px 0;
       }
       .contact-box{
         background-color: lighten($color-primary, 10%);
@@ -705,42 +675,41 @@ iframe{
       }
       .top-head{
         background-color: $color-green;
-        width: 100%;
         color: $color-primary;
-        border-radius: 8px 8px 0 0 ;
+        border-radius: 15px 15px 0 0 ;
         display: flex;
         flex-direction: row;
+        opacity: 70%;
         padding: 0 20px;
       }
       .ch2{
-       display: flex;
        align-self: center;
+       line-height: 2rem;
+       font-size: 26px;
 
 
       }
 
-      .contact-info{
-        display: flex;
-        flex-direction: column;
-        padding: 30px 0 0 0;
-        width: 100%;
-        height: 100%;
-      }
+    //   .contact-info{
+    //     display: flex;
+    //     flex-direction: column;
+    //     width: 100%;
+    //     height: 100%;
+    //   }
       .contact-btn{
         display: flex;
         position: relative;
         float: right;
         flex-direction: row;
-        gap: 10px;
+        padding: 10px;
         align-items: center;
 
         & a{
-
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 20px 20px;
-    float:right;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 20px 20px;
+            float:right;
         & i{
             font-size: 3rem;
 
@@ -753,7 +722,7 @@ iframe{
         flex-direction: column;
         width: 100%;
         height: 100%;
-        padding: 0 40px 20px;
+        padding: 20px 40px 20px;
     }
 .my-message{
     display: flex;
@@ -767,7 +736,7 @@ iframe{
         float:right;
         font-size: 3rem;
         margin: 20px;
-        color: $color-secondary;
+        color: grey;
     }
 }
 
@@ -793,6 +762,11 @@ iframe{
     float:left;
     font-family: inherit;
         }
+input, textarea{
+&:hover{
+        box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
+    }
+}
 
     .submit{
         background-color: transparent;
@@ -814,15 +788,15 @@ iframe{
     background-color: $color-green;
     width: 100%;
     height: 70px;
-    border-radius: 0 0 8px 8px ;
+    border-radius: 0 0 15px 15px ;
     display: flex;
     flex-direction: row;
+    opacity: 70%;
   }
 
     .back-top{
         display: flex;
         justify-content: center;
-        margin-top: 50px;
         text-decoration: underline;
     }
     //-----------------------------------------------------------------------------Footer----------------------------------------------------------------------------------------------------------------------
@@ -843,7 +817,7 @@ footer{
  }
    .f-text{
         display: flex;
-        padding:50px 10px;
+        padding:50px 50px;
         z-index: 7;
         top: 0px;
         position: absolute;

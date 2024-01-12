@@ -1,0 +1,52 @@
+@media screen and (min-width: 768px){
+.container{
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+  .project{
+    width: 45% !important;
+    margin: 20px 20px !important;
+    
+  }
+}
+.contact, .qualification{
+    max-width: 741px;
+}
+
+
+
+                                                @media screen and (min-width: 992px){
+    header{
+    display: flex !important;
+    max-width: 340px;
+}
+    .side-menu{
+    display: flex !important;
+    max-width: 340px;
+
+}
+.nav:hover{
+    color:green;
+    .sidebar-main{
+background-color: white !important;
+  }
+}
+.aboutme{
+
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    & .textbox, .qualification{
+        width: 45%;
+        margin: 20px;
+        padding: 20px 50px;
+    }
+}
+.self-img{
+display: flex !important;
+justify-content: center;
+
+}
+
+}
