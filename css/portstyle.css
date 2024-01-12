@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;900&display=swap");
 @media screen and (min-width: 768px) {
   .container {
     flex-direction: row !important;
@@ -9,7 +10,7 @@
     margin: 20px 20px !important;
   }
 }
-.contact {
+.contact, .qualification {
   max-width: 741px;
 }
 
@@ -28,12 +29,22 @@
   .nav:hover .sidebar-main {
     background-color: white !important;
   }
+  .aboutme {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  .aboutme .textbox, .aboutme .qualification {
+    width: 45%;
+    margin: 20px;
+  }
 }
 * {
   width: 100%;
   box-sizing: border-box;
   padding: 0;
   list-style: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
 }
 * a {
   text-decoration: none;
@@ -55,7 +66,6 @@ body {
   align-items: center;
   display: grid;
   letter-spacing: 4px;
-  font-family: math, emoji;
 }
 
 .container {
@@ -70,6 +80,11 @@ body {
 
 .fa {
   width: 30px;
+}
+
+h2 {
+  justify-content: center;
+  display: flex;
 }
 
 .background {
@@ -223,6 +238,13 @@ header {
   text-align: center;
   border-radius: 0 50px 50px 0;
   box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.45);
+}
+
+h4 {
+  font-weight: 900;
+  font-size: 70px;
+  color: #212427;
+  text-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
 }
 
 .user-img {
@@ -391,12 +413,15 @@ header {
   position: relative;
   animation: slide 12s steps(4) infinite;
 }
+.dynamic-txts li span {
+  font-weight: bold;
+}
+
 @keyframes slide {
   100% {
     top: -360px;
   }
 }
-
 .dynamic-txts li::after {
   content: "";
   position: absolute;
@@ -405,7 +430,7 @@ header {
   width: 100%;
   background-color: #000000;
   border-left: 2px solid #01ff2b;
-  animation: typing 3s steps(12) infinite;
+  animation: typing 3s steps(13) infinite;
 }
 
 @keyframes typing {
@@ -422,12 +447,14 @@ header {
   color: #01ff2b;
   padding: 20px 20px 20px 20px;
   overflow-x: hidden !important;
+  justify-content: center;
 }
 
 .aboutme {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .textbox {
@@ -435,7 +462,13 @@ header {
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  background-color: #000000;
+  justify-content: center;
+  margin: 20px 0;
+  border-radius: 25px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #212427;
   justify-content: center;
 }
 .textbox a:hover {
@@ -570,10 +603,11 @@ iframe {
 }
 
 .view {
-  margin: 30px;
-  background-color: transparent;
+  width: 100%;
+  display: flex;
   opacity: 70%;
   border-radius: 20px;
+  justify-content: center;
   padding: 20px 10px;
   color: #fff;
   line-height: 2;
@@ -632,7 +666,7 @@ iframe {
 .contact-info {
   display: flex;
   flex-direction: column;
-  padding: 40px 0 0 0;
+  padding: 30px 0 0 0;
   width: 100%;
   height: 100%;
 }
@@ -671,6 +705,7 @@ iframe {
   color: #000000;
   width: 80%;
   text-align: center;
+  margin: 10px;
 }
 .my-message i {
   float: right;
@@ -731,6 +766,7 @@ iframe {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  text-decoration: underline;
 }
 
 footer {
