@@ -117,42 +117,42 @@ h2 {
 }
 
 .star1 {
-  background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star1.png);
+  background: url(images/stars/star1.png);
   animation-delay: 0s;
 }
 
 .star2 {
-  background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star2.png);
+  background: url(images/stars/star2.png);
   animation-delay: -1s;
 }
 
 .star3 {
-  background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star3.png);
+  background: url(images/stars/star3.png);
   animation-delay: -2s;
 }
 
 .star4 {
-  background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star4.png);
+  background: url(images/stars/star4.png);
   animation-delay: -3s;
 }
 
 .star5 {
-  background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star5.png);
+  background: url(images/stars/star5.png);
   animation-delay: -4s;
 }
 
 .star6 {
-  background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star6.png);
+  background: url(images/stars/star6.png);
   animation-delay: -5s;
 }
 
 .star7 {
-  background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star7.png);
+  background: url(images/stars/star7.png);
   animation-delay: -6s;
 }
 
 .star8 {
-  background: url(file:///C:/xampp/htdocs/Portfolio%20Project/portfolio/images/stars/star8.png);
+  background: url(images/stars/star8.png);
   animation-delay: -7s;
 }
 
