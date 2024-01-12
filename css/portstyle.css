@@ -461,13 +461,13 @@ header {
   visibility: visible;
 }
 
-#top {
+.top {
   bottom: 100px;
   left: -40%;
   right: -40%;
 }
 
-#top::before {
+.top::before {
   top: 80%;
   left: 45%;
 }
@@ -496,6 +496,12 @@ header {
 }
 .portfolio .netmatters {
   border-radius: 15px 15px 0px 0px;
+}
+
+iframe {
+  height: 400px;
+  width: 100%;
+  scroll-behavior: none;
 }
 
 .project {
@@ -658,7 +664,7 @@ footer {
   bottom: 0;
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 100px;
+  height: 200px;
   border: none;
 }
 footer .background {
@@ -669,12 +675,11 @@ footer .background {
 }
 footer .f-text {
   display: flex;
-  padding: 20px 20px;
+  padding: 50px 10px;
   z-index: 7;
   top: 0px;
   position: absolute;
   color: #fff;
-  font-weight: 600;
   text-align: center;
 }
 
