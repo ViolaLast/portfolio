@@ -1,6 +1,6 @@
 
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 768px){
 .container{
     flex-direction: row !important;
     flex-wrap: wrap;
@@ -13,15 +13,16 @@
     
   }
 }
+.contact{
+    max-width: 741px;
+}
 
 
 
-
-
-@media screen and (min-width: 960px){
+@media screen and (min-width: 992px){
     header{
     display: flex !important;
-    width: 35% !important;
+    max-width: 340px;
 }
     .side-menu{
     display: flex !important;
@@ -176,6 +177,7 @@ width: 100vw;
 padding: 0 20px;
 display: flex;
 justify-content: center;
+z-index: 20;
 }
 .menu-btn{
     border: none;
@@ -303,14 +305,21 @@ box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.45);
             align-content: center;
             justify-content: center;
             font-size: 60px;
-            
-
             }
         }
-        
-
     }
-
+    .hover{
+        display: none;
+    }
+    .coding:hover{
+        background-color: $color-grey;
+        .hover{
+            display: inline;
+        }
+        .origin{
+            display: none;
+        }
+    }
 
 
 .sidebar-main{
@@ -347,7 +356,9 @@ box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.45);
 .welcome{
     width:100vw;
     height:100vh;
-    z-index: 5;
+    z-index: -5;
+    position: absolute;
+    top: 50px;
 }
 .text-container{
 padding: 200px 50px 50px;
@@ -355,48 +366,18 @@ height: 100%;
 justify-content: center;
 text-align: center;
 display: flex;
-z-index: 20;
 }
 
-.intro{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
-    border-radius: 20px;
-    // max-width: 747px;
-    // max-height: 800px;
-    &:hover{
-       background-color: $color-green;
-       box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
-       .title{
-       color: #000000;
-       }
-       .p{
-        color: #000000;
-       }
-    }
-
-    & p{
-        color: transparent;
-        font-weight: 400;
-        font-size: 2rem;
-        text-transform: uppercase;
-        color: #ddd; 
-    }
-}
-
-.title{
-    color: transparent;
-    font-weight: 700;
-    font-size: 3em;
-    text-transform: uppercase;
-   color: #ddd;
-    &:hover{
-        text-shadow: 0 5px 50px 0 $color-green, 0 5px 50px 0 $color-green;
-    }
-    }
+// .title{
+//     color: transparent;
+//     font-weight: 700;
+//     font-size: 3em;
+//     text-transform: uppercase;
+//    color: #ddd;
+//     &:hover{
+//         text-shadow: 0 5px 50px 0 $color-green, 0 5px 50px 0 $color-green;
+//     }
+//     }
 
     .head-nav{
         border: 1px solid $color-green;
@@ -412,9 +393,66 @@ z-index: 20;
     width: 100%;
     background-color: $color-green;
     box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
-
-        }
+    }
+    .wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width:auto;
+     overflow: hidden;
+}
     
+    .static-txt{
+        color: $color-secondary;
+        font-size: 60px;
+        font-weight: 400;
+    }
+    .dynamic-txts{
+        margin-left: 15px;
+        line-height: 90px;
+        height: 90px;
+        background: transparent;
+        overflow: hidden;
+
+    }
+
+    .dynamic-txts li{
+        color: $color-green;
+        font-size: 60px;
+        font-weight: 500;
+        top:0;
+        position: relative;
+        animation: slide 12s steps(4) infinite;
+
+        @keyframes slide {
+            100%{
+                top: -360px;
+            }
+            
+        }
+    }
+
+    .dynamic-txts li::after{
+        content:"";
+        position: absolute;
+        left:0;
+        height: 100%;
+        width: 100%;
+        background-color: $color-primary;
+        border-left: 2px solid $color-green;
+        animation: typing 3s steps(12) infinite;
+    }
+
+    @keyframes typing{
+        40%,
+        60%{
+            left:calc(100%)
+        }
+        100%{
+            left:0;
+            right: 0;
+        }
+    }
     //----------------------------------------------------------------------------------About Me------------------------------------------------------------------------------------------------------------------------------------------
     .main{
         background-color: $color-primary;
@@ -532,6 +570,10 @@ text-align: center;
 margin-left: auto;
 margin-right: auto;
 
+.container{
+    padding: 50px 0;
+}
+
 .netmatters{
     border-radius: 15px 15px 0px 0px;
 }
@@ -551,9 +593,7 @@ iframe{
         margin: 30px 0;
         top: 0px;
         transition: top .5s;
-        & a{
-            
-        }
+    
         &:hover{
             box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
             top: -20px;
@@ -568,11 +608,25 @@ iframe{
         border-radius: 15px 15px 0 0 ;
             }
             
-    
-           
+.view{
+    margin: 30px;
+    background-color: transparent;
+    opacity: 70%;
+    border-radius: 20px;
+    padding: 20px 10px;
+    color: #fff;
+    line-height: 2;
+    text-transform: uppercase;
+    box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.973);
+    &:hover{
+        background-color: $color-green;
+        box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
 
+}
+}
 
       .list{
+        padding: 20px;
         & li{
             display: inline;
             background-color:transparent;
@@ -582,12 +636,11 @@ iframe{
             border:2px solid $color-primary;
             line-height: 2;
             text-transform: uppercase;
-
         }
       }
       
      .description{
-        padding: 20px 40px;
+        padding: 20px 40px 60px;
      }
 
 //-------------------------------------------------------------------------------------------------------scs-scheme------------------------------------------------------------------------------------------------------------
@@ -598,6 +651,8 @@ iframe{
 
       .contact{
         height:100vh;
+        margin-left: auto;
+    margin-right: auto;
       }
       .contact-box{
         background-color: lighten($color-primary, 10%);
@@ -618,17 +673,7 @@ iframe{
 
 
       }
-      .bottom-head{
-        background-color: $color-green;
-        width: 100%;
-        height: 70px;
-        border-radius: 0 0 8px 8px ;
-        display: flex;
-        flex-direction: row;
-        padding: 0 20px;
-        margin-top: 30px;
 
-      }
       .contact-info{
         display: flex;
         flex-direction: column;
@@ -656,19 +701,34 @@ iframe{
 
     }
         }
-      }
-      .contact-form{
+    }
+
+    .contact-form{
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 100%;
         padding: 0 40px 20px;
+    }
+.my-message{
+    display: flex;
+    justify-content: right;
+    float: right;
+    color: #000000;
+    width: 80%;
+    text-align: center;
+    & i{
+        float:right;
+        font-size: 3rem;
+        margin: 20px;
+        color: $color-secondary;
+    }
+}
 
-       
-      }
 .contact-input{
     gap:20px;
 }
+
 .form-input{
     gap: 20px;
     display: flex;
@@ -692,19 +752,27 @@ iframe{
         background-color: transparent;
         opacity: 70%;
         border-radius: 20px;
-        padding: 10px 0 ;
-        margin: 50px 0;
+        padding: 20px 10px ;
+        margin: 20px 0;
         color: $color-secondary;
-        border: none;
         line-height: 2;
         text-transform: uppercase;
         box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.973);
                 &:hover{
             background-color: $color-green;
             box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
-
+                }
     }
-}
+
+.bottom-head{
+    background-color: $color-green;
+    width: 100%;
+    height: 70px;
+    border-radius: 0 0 8px 8px ;
+    display: flex;
+    flex-direction: row;
+  }
+
     .back-top{
         display: flex;
         justify-content: center;
