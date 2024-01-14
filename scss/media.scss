@@ -1,8 +1,36 @@
-@media screen and (min-width: 768px){
+                                                        
+                                                        
+                                                        
+                                                        @media screen and (max-width: 550px){
+    .contact-input input, textarea {
+       width: 100% !important;
+    }
+.contact-form{
+    padding: 20px 10px 20px !important;
+}
+.text-container{
+    scale: 0.5 !important;
+}
+.description {
+    padding: 20px !important;
+}
+footer .f-text {
+    padding: 20px !important;
+}
+}
+
+
+                                                                    @media screen and (min-width: 768px){
 .container{
     flex-direction: row !important;
     flex-wrap: wrap;
     justify-content: center;
+}
+.list{
+    padding: 20px;
+    & li{
+        width:40% !important;
+    }
 }
 
 
@@ -32,15 +60,21 @@ background-color: white !important;
 display: flex !important;
 justify-content: center;
 }
+.portfolio{
+    flex-wrap: wrap;
+    flex-direction: row !important;
+}
 .project{
     width: 45% !important;
-    margin: 20px 20px !important;
-    
+    margin: 20px !important;
+    align-self: stretch;
   }
-
+.m992{
+    width: 992px;
+}
 }
 
-@media screen and (min-width: 1200px){
+                                            @media screen and (min-width: 1200px){
 
 
     header{
@@ -52,9 +86,19 @@ justify-content: center;
         max-width: 340px;
     
     }
-
-
-
+    .project{
+        width: 30% !important;
+        margin:20px !important;
+        align-self: stretch;
+    }
+.m1200{
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    padding: 0 0 0 340px !important;
+}
 }
 
 

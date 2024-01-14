@@ -1,48 +1,66 @@
 
 
+//--------------------------------------------------------------------------------- Importing Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;900&display=swap');
-@import "media";
 
+// ------------------------------------------------------------------Importing a separate file for media queries
+@import "media";
+//-------------------------------------------------------------------------------------------- Colors
+$color-primary: #000000;
+$color-secondary: #fff;
+$color-grey: #212427;
+$color-violet: #471471;
+$color-green: #01ff2b;
+$color-blue: #174174;
+$color-wine: #741741;
+$color-dark-green: #147147;
+
+
+//-------------------------------------------------------------------------------------- Mixins
+
+//--------------------------------------------------------------------------------------------------------MAIN-------------------------------------------------------------------------------------------------------------------
 *{
     width: 100%;
     box-sizing: border-box;
-  // border: 1px solid black;
     padding: 0;
+    margin-left: 0;
+    margin-right:0;
     list-style: none;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
 
     & a {
-      text-decoration: none;
-      cursor: pointer;
-      color: inherit;
-      width:auto;
+        text-decoration: none;
+        cursor: pointer;
+        color: inherit;
+        width:auto;
     }
-  }
+}
   *::before,
-  ::after {
+    *::after {
     box-sizing: border-box;
   }
   html,
   body{
     margin: 0;
     padding: 0;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
     align-items: center;
     display:grid;
     letter-spacing: 4px;
   
 }
 
-::-webkit-scrollbar {
-    // visibility:hidden;
-  }
+// ::-webkit-scrollbar {
+//     visibility:hidden;
+//     scrollbar-color: transparent;
+//   }
 
 .container{
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    background-color: black;
+    background-color: $color-primary;
 }
 .hidden{
     display: none;
@@ -51,14 +69,12 @@
     width: 30px;
 }
 
-//------------------------------------------------------------------------------------------------h1-h6------------------------------------------------------------------------------------------------------------------------
-
+//------------------------------------------------------------------------------------------------h1-h6
 h2{
     justify-content: center;
     display: flex;
-
 }
-//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------Background
 .background{
     position: relative;
     width: 100vw;
@@ -134,17 +150,7 @@ h2{
     100%{
         transform: scale(2);
     }
-
 }
-//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-$color-primary: #000000;
-
-$color-secondary: #fff;
-
-$color-grey: #212427;
-
-$color-green:#01ff2b;
-
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .btn-wrap{
 width: 100vw;
@@ -165,9 +171,9 @@ z-index: 20;
     background-color: $color-primary;
     justify-content: center;
     z-index: 3;
-        box-shadow: rgb(255 254 254 / 17%) 0px -23px 25px 0px inset, rgb(255 254 254 / 15%) 0px -36px 30px 0px inset,
-        rgb(255 255 255 / 10%) 0px -79px 40px 0px inset, rgb(255 255 255 / 6%) 0px 2px 1px, rgb(255 255 255 / 9%) 0px 4px 2px, 
-        rgb(255 255 255 / 9%) 0px 8px 4px, rgb(255 255 255 / 9%) 0px 16px 8px, rgb(255 255 255 / 9%) 0px 32px 16px;
+        box-shadow: rgba(255 254 254 / 17%) 0px -23px 25px 0px inset, rgba(255 254 254 / 15%) 0px -36px 30px 0px inset,
+        rgba(255 255 255 / 10%) 0px -79px 40px 0px inset, rgba(255 255 255 / 6%) 0px 2px 1px, rgba(255 255 255 / 9%) 0px 4px 2px, 
+        rgba(255 255 255 / 9%) 0px 8px 4px, rgb(255 255 255 / 9%) 0px 16px 8px, rgba(255 255 255 / 9%) 0px 32px 16px;
     
         &:hover{
     box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
@@ -176,7 +182,8 @@ z-index: 20;
             }
         }
     }
-   .initials-wrap{
+
+.initials-wrap{
     width: auto;
     background: transparent;
     border: none;
@@ -191,30 +198,26 @@ z-index: 20;
     font-size: 3rem;
     align-items: center;
     justify-content: center;
-   color: $color-secondary;
+    color: $color-secondary;
             &:hover{
             color: $color-green;
             }
-    
-}
+        }
 }
 //-----------------------------------------------------------------------------------------------Side bar-----------------------------------------------------------------------------------------------------------------------
 header{
     display: none;
-    left: 0;
-    height: 100%;
+    height: 100vh;
     width: 50%;
     position: fixed;
     z-index: 10;
     top: 0;
     left: 0;
-    overflow-x: hidden;
 }
 
 .side-menu{
-// display: none;
 width: 100%;
-height: 100%;   
+height: 100vh;   
 flex-direction: column;
 // justify-content: space-between;
 overflow: hidden;
@@ -233,11 +236,10 @@ h4{
 
 
 .user-img{
-    height:20%;
+    height:30vh;
     display: flex;
     justify-content: space-around;
-    padding: 10px 20px;
-   
+    padding:20px;
 }
 
 .image-wrap{
@@ -247,36 +249,30 @@ h4{
     background-color: $color-primary;
     align-items: center;
     color: $color-secondary;
-    z-index: 5;
     display: flex;
     justify-content: space-around;
     box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.45);
     &:hover{
         box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
     }
-
 }
+
 .user-connect{
-    height:20%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    height:20vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
     & a{
         width: 130px;
         height: 130px;
-        align-self: center;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        border: none;
-        justify-content: center;
+        justify-content:center;
     border-radius: 50%;
     background-color: $color-primary;
     color: $color-secondary;
     box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.45);
     &:hover{
         box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
-    }
+            }
         & i{
             height: 100% !important;
             padding: 10px 10px !important;
@@ -305,35 +301,33 @@ h4{
 
 
 .sidebar-main{
-    flex-grow: 1;
-    line-height: 3;
+height: 50%;
+    display: flex;
     background-color: $color-primary;
-    border-top: 2px solid $color-grey;
-    border-bottom: 2px  solid $color-grey;
     box-shadow: 0 0 10px $color-green ,0 0 0 0,0 0 80px $color-green, 0 0 0 0;
 }
 .nav-menu {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     & li{
-        flex-grow: 1;
         display: flex;
         font-size: 1.5rem;
-        line-height: 4;
+        line-height: 2.5;
         flex-direction: column;
         align-self: stretch;
     }
- & a{
+& a{
     color: #818181;
     display: block;
-  }
+    }
 }
 .nav:hover{
     color:$color-green;
     box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
-  }
+}
 
-//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------Welcome Text-------------------------------------------------------------------------------------------------------
 
 .welcome{
     width:100vw;
@@ -343,23 +337,12 @@ h4{
     top: 50px;
 }
 .text-container{
-padding: 200px 50px 50px;
+padding: 200px 0px 50px;
 height: 100%;
 justify-content: center;
 text-align: center;
 display: flex;
 }
-
-// .title{
-//     color: transparent;
-//     font-weight: 700;
-//     font-size: 3em;
-//     text-transform: uppercase;
-//    color: #ddd;
-//     &:hover{
-//         text-shadow: 0 5px 50px 0 $color-green, 0 5px 50px 0 $color-green;
-//     }
-//     }
 
     .head-nav{
         border: 1px solid $color-green;
@@ -440,6 +423,13 @@ display: flex;
             right: 0;
         }
     }
+    //-----------------------------------------------------------------------------------image background-----------------------------------------------------------------------------------------------------------------------
+
+    .stary{
+        background: url("\images\jeremy-thomas.jpg");
+        background-size:cover;
+
+    }
     //----------------------------------------------------------------------------------About Me------------------------------------------------------------------------------------------------------------------------------------------
     .main{
         background-color: $color-primary;
@@ -447,12 +437,19 @@ display: flex;
         padding: 50px 20px 50px 20px;
         overflow-x: hidden;
         justify-content: center;
+        display: flex;
+        flex-direction: column;
+
     }
     .aboutme{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         padding: 50px 0px;
+        justify-content: space-around;
+        align-self: center;
+    }
+    .p-h1{
+padding: 20px;
 
     }
     .textbox{
@@ -461,14 +458,13 @@ display: flex;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 20px 0;
-        background-color: $color-grey;
         position: relative;
     }
 
     .self-img{
-        display: none;
-       
+        display: flex;
+        justify-content: center;
+
         & img{
             border-radius: 50%;
             width: 200px; 
@@ -481,10 +477,9 @@ display: flex;
     }
     .self{
         margin: 20px 0;
-        padding: 20px;
+        padding:0 20px;
         display: flex;
         flex-direction: column;
-        background-color: $color-primary;
         justify-content: center;
     }
     .qualification{
@@ -496,6 +491,7 @@ display: flex;
         background-color: $color-grey;
         justify-content: center;
     }
+
     .question{
         justify-content: left;
         float: left;
@@ -516,55 +512,51 @@ display: flex;
      }
 .chat-img{
     margin: 20px 0 20px 10px;
-    border-radius: 50%;
-    border: none;
     width: 50px;
     height: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     float: right;
-    align-items: flex-end;
     & i{
         font-size: 3rem;
         color: grey;
     }
-
 }
-   
+
 
 //------------------------------------------------------------------------------About Me--hover------------------------------------------------------------------------------------
-.html, .css, .java, .ang{
+.html, .css, .java, .ang, .web{
     text-decoration: underline;
+    text-transform: uppercase;
 }
     .tooltip-text {
         visibility: hidden;
         position: absolute;
         z-index: 2;
-       width: 280px;
-      }
-      
-      
-      .hover-text:hover .tooltip-text {
+        width: 280px;
+    }
+
+    .hover-text:hover .tooltip-text {
         visibility: visible;
-      }
-      
-      .top {
-       bottom: 100px;
-       left: -40%;
-       right: -40%;
-      }
-      
-      .top::before {
+}
+
+.top {
+    bottom: 100px;
+    left: -40%;
+    right: -40%;
+}
+
+    .top::before {
         top: 80%;
         left: 45%;
-      }
-      
-      .hover-text {
+}
+
+    .hover-text {
         position: relative;
         display: inline;
         text-align: center;
-      }
+}
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .netmatters{
     overflow-y: hidden;
@@ -582,6 +574,7 @@ margin-right: 0;
 text-align: center;
 margin-left: auto;
 margin-right: auto;
+max-width: 2000px;
 
 .container{
     padding: 50px 0;
@@ -596,20 +589,21 @@ iframe{
     width:100%;
     scroll-behavior: none;
 }
-      .project{
+    .project{
         border-radius: 15px;
-        border: 1px solid $color-green;
+        border: 2px solid $color-green;
         display: flex;
         color: $color-secondary;
         flex-direction: column;
         background-color: $color-grey;
-        margin: 30px 0;
+        margin: 30px 20px;
+        position: relative;
         top: 0px;
-        transition: top .5s;
+        transition:top 0.5s;
     
         &:hover{
             box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
-            top: -20px;
+            top: -10px;
         }
     }
 
@@ -619,19 +613,23 @@ iframe{
         width: 100%;
         object-fit: cover;
         border-radius: 15px 15px 0 0 ;
-            }
+}
             
 .view{
-    width: 100%;
+    background-color: $color-primary;
     display: flex;
+    width: 80%;
+    flex-wrap: wrap;
     opacity: 70%;
     border-radius: 20px;
     justify-content: center;
     padding: 20px 10px;
     color: #fff;
-    line-height: 2;
     text-transform: uppercase;
-    box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.973);
+    position: absolute;
+    bottom: 20px;
+    box-shadow: 6px 6px 6px 0px rgb(16, 14, 14);
+
     &:hover{
         background-color: $color-green;
         box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
@@ -639,27 +637,52 @@ iframe{
 }
 }
 
-      .list{
+.list{
         padding: 20px;
+        & .h{
+            background-color: $color-violet;
+        }
+        & .s {
+            background-color: $color-blue;
+        }
+        &.j{
+            background-color: $color-wine;
+        }
+        &.p{
+            background-color: $color-dark-green;
+        }
         & li{
-            display: inline;
-            background-color:transparent;
-            border-radius: 20px;
+            border-radius: 10px;
             padding: 10px 20px ;
             color: $color-secondary;
-            border:2px solid $color-primary;
-            line-height: 2;
+            font-size: 10px;
+            border:none;
+            margin-top:5px;
+            justify-content: center;
             text-transform: uppercase;
+            width:100%;
+            display: inline-flex;
         }
-      }
-      
-     .description{
+    }
+
+    .description{
         padding: 20px 40px 60px;
-     }
-
+}
 //-------------------------------------------------------------------------------------------------------scs-scheme------------------------------------------------------------------------------------------------------------
-     .scs-scheme{
+    .scs-scheme{
 
+    }
+    .scription{
+        padding: 20px 40px 100px;
+        text-align: left;
+    }
+    .summary{
+        padding: 10px;
+        & li{
+            list-style: inside;
+            padding: 2px;
+            list-style-image: url("..\images\netmatters.png");
+        }
      }
       //------------------------------------------------------------------------------------Contact-Me----------------------------------------------------------------------------------------------------------------------
 
@@ -679,7 +702,7 @@ iframe{
         display: flex;
         flex-direction: row;
         opacity: 70%;
-        padding: 0 20px;
+        padding: 20px 20px;
       }
       .ch2{
        align-self: center;
@@ -696,23 +719,23 @@ iframe{
     //     height: 100%;
     //   }
       .contact-btn{
-        display: flex;
+
         position: relative;
-        float: right;
-        flex-direction: row;
-        padding: 10px;
+        display: flex;
         align-items: center;
+        justify-content: end;
+        padding:0 10px;
 
         & a{
-            font-size: 1rem;
-            font-weight: 600;
             cursor: pointer;
-            padding: 20px 20px;
-            float:right;
+            padding: 00px 20px;
+            &:hover{
+                color: lighten($color-primary, 20%);
+                scale: 1.2;
+            }
         & i{
             font-size: 3rem;
-
-    }
+            }
         }
     }
 
@@ -768,12 +791,14 @@ input, textarea{
 }
 
     .submit{
-        background-color: transparent;
         opacity: 70%;
+        width: auto;        
         border-radius: 20px;
-        padding: 20px 10px ;
-        margin: 20px 0;
+        margin:20px;
+        background-color: $color-primary;
         color: $color-secondary;
+        border: none;
+        padding: 20px;
         line-height: 2;
         text-transform: uppercase;
         box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.973);
@@ -796,7 +821,9 @@ input, textarea{
     .back-top{
         display: flex;
         justify-content: center;
+        &:hover{
         text-decoration: underline;
+        }
     }
     //-----------------------------------------------------------------------------Footer----------------------------------------------------------------------------------------------------------------------
 footer{

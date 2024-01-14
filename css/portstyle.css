@@ -1,9 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;900&display=swap");
+@media screen and (max-width: 550px) {
+  .contact-input input, textarea {
+    width: 100% !important;
+  }
+  .contact-form {
+    padding: 20px 10px 20px !important;
+  }
+  .text-container {
+    scale: 0.5 !important;
+  }
+  .description {
+    padding: 20px !important;
+  }
+  footer .f-text {
+    padding: 20px !important;
+  }
+}
 @media screen and (min-width: 768px) {
   .container {
     flex-direction: row !important;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .list {
+    padding: 20px;
+  }
+  .list li {
+    width: 40% !important;
   }
 }
 @media screen and (min-width: 992px) {
@@ -25,9 +48,17 @@
     display: flex !important;
     justify-content: center;
   }
+  .portfolio {
+    flex-wrap: wrap;
+    flex-direction: row !important;
+  }
   .project {
     width: 45% !important;
-    margin: 20px 20px !important;
+    margin: 20px !important;
+    align-self: stretch;
+  }
+  .m992 {
+    width: 992px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -39,11 +70,26 @@
     display: flex !important;
     max-width: 340px;
   }
+  .project {
+    width: 30% !important;
+    margin: 20px !important;
+    align-self: stretch;
+  }
+  .m1200 {
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    padding: 0 0 0 340px !important;
+  }
 }
 * {
   width: 100%;
   box-sizing: border-box;
   padding: 0;
+  margin-left: 0;
+  margin-right: 0;
   list-style: none;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
@@ -56,7 +102,7 @@
 }
 
 *::before,
-::after {
+*::after {
   box-sizing: border-box;
 }
 
@@ -64,7 +110,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
   align-items: center;
   display: grid;
   letter-spacing: 4px;
@@ -74,7 +120,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  background-color: black;
+  background-color: #000000;
 }
 
 .hidden {
@@ -223,19 +269,17 @@ h2 {
 
 header {
   display: none;
-  left: 0;
-  height: 100%;
+  height: 100vh;
   width: 50%;
   position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
-  overflow-x: hidden;
 }
 
 .side-menu {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   overflow: hidden;
   text-align: center;
@@ -251,10 +295,10 @@ h4 {
 }
 
 .user-img {
-  height: 20%;
+  height: 30vh;
   display: flex;
   justify-content: space-around;
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 .image-wrap {
@@ -264,7 +308,6 @@ h4 {
   background-color: #000000;
   align-items: center;
   color: #fff;
-  z-index: 5;
   display: flex;
   justify-content: space-around;
   box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.45);
@@ -274,7 +317,7 @@ h4 {
 }
 
 .user-connect {
-  height: 20%;
+  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -282,11 +325,6 @@ h4 {
 .user-connect a {
   width: 130px;
   height: 130px;
-  align-self: center;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  border: none;
   justify-content: center;
   border-radius: 50%;
   background-color: #000000;
@@ -323,23 +361,21 @@ h4 {
 }
 
 .sidebar-main {
-  flex-grow: 1;
-  line-height: 3;
+  height: 50%;
+  display: flex;
   background-color: #000000;
-  border-top: 2px solid #212427;
-  border-bottom: 2px solid #212427;
   box-shadow: 0 0 10px #01ff2b, 0 0 0 0, 0 0 80px #01ff2b, 0 0 0 0;
 }
 
 .nav-menu {
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 .nav-menu li {
-  flex-grow: 1;
   display: flex;
   font-size: 1.5rem;
-  line-height: 4;
+  line-height: 2.5;
   flex-direction: column;
   align-self: stretch;
 }
@@ -362,7 +398,7 @@ h4 {
 }
 
 .text-container {
-  padding: 200px 50px 50px;
+  padding: 200px 0px 50px;
   height: 100%;
   justify-content: center;
   text-align: center;
@@ -445,19 +481,31 @@ h4 {
     right: 0;
   }
 }
+.stary {
+  background: url("imagesjeremy-thomas.jpg");
+  background-size: cover;
+}
+
 .main {
   background-color: #000000;
   color: #fff;
   padding: 50px 20px 50px 20px;
   overflow-x: hidden;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .aboutme {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 50px 0px;
+  justify-content: space-around;
+  align-self: center;
+}
+
+.p-h1 {
+  padding: 20px;
 }
 
 .textbox {
@@ -466,13 +514,12 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px 0;
-  background-color: #212427;
   position: relative;
 }
 
 .self-img {
-  display: none;
+  display: flex;
+  justify-content: center;
 }
 .self-img img {
   border-radius: 50%;
@@ -486,10 +533,9 @@ h4 {
 
 .self {
   margin: 20px 0;
-  padding: 20px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  background-color: #000000;
   justify-content: center;
 }
 
@@ -525,23 +571,21 @@ h4 {
 
 .chat-img {
   margin: 20px 0 20px 10px;
-  border-radius: 50%;
-  border: none;
   width: 50px;
   height: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   float: right;
-  align-items: flex-end;
 }
 .chat-img i {
   font-size: 3rem;
   color: grey;
 }
 
-.html, .css, .java, .ang {
+.html, .css, .java, .ang, .web {
   text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .tooltip-text {
@@ -587,6 +631,7 @@ h4 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  max-width: 2000px;
 }
 .portfolio .container {
   padding: 50px 0;
@@ -603,18 +648,19 @@ iframe {
 
 .project {
   border-radius: 15px;
-  border: 1px solid #01ff2b;
+  border: 2px solid #01ff2b;
   display: flex;
   color: #fff;
   flex-direction: column;
   background-color: #212427;
-  margin: 30px 0;
+  margin: 30px 20px;
+  position: relative;
   top: 0px;
   transition: top 0.5s;
 }
 .project:hover {
   box-shadow: 0 0 10px #01ff2b, 0 0 40px #01ff2b, 0 0 80px #01ff2b;
-  top: -20px;
+  top: -10px;
 }
 
 .soon {
@@ -625,16 +671,19 @@ iframe {
 }
 
 .view {
-  width: 100%;
+  background-color: #000000;
   display: flex;
+  width: 80%;
+  flex-wrap: wrap;
   opacity: 70%;
   border-radius: 20px;
   justify-content: center;
   padding: 20px 10px;
   color: #fff;
-  line-height: 2;
   text-transform: uppercase;
-  box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.973);
+  position: absolute;
+  bottom: 20px;
+  box-shadow: 6px 6px 6px 0px rgb(16, 14, 14);
 }
 .view:hover {
   background-color: #01ff2b;
@@ -644,19 +693,47 @@ iframe {
 .list {
   padding: 20px;
 }
+.list .h {
+  background-color: #471471;
+}
+.list .s {
+  background-color: #174174;
+}
+.list.j {
+  background-color: #741741;
+}
+.list.p {
+  background-color: #147147;
+}
 .list li {
-  display: inline;
-  background-color: transparent;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px 20px;
   color: #fff;
-  border: 2px solid #000000;
-  line-height: 2;
+  font-size: 10px;
+  border: none;
+  margin-top: 5px;
+  justify-content: center;
   text-transform: uppercase;
+  width: 100%;
+  display: inline-flex;
 }
 
 .description {
   padding: 20px 40px 60px;
+}
+
+.scription {
+  padding: 20px 40px 100px;
+  text-align: left;
+}
+
+.summary {
+  padding: 10px;
+}
+.summary li {
+  list-style: inside;
+  padding: 2px;
+  list-style-image: url("..imagesnetmatters.png");
 }
 
 .contact {
@@ -677,7 +754,7 @@ iframe {
   display: flex;
   flex-direction: row;
   opacity: 70%;
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 
 .ch2 {
@@ -687,19 +764,19 @@ iframe {
 }
 
 .contact-btn {
-  display: flex;
   position: relative;
-  float: right;
-  flex-direction: row;
-  padding: 10px;
+  display: flex;
   align-items: center;
+  justify-content: end;
+  padding: 0 10px;
 }
 .contact-btn a {
-  font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
-  padding: 20px 20px;
-  float: right;
+  padding: 0px 20px;
+}
+.contact-btn a:hover {
+  color: #333333;
+  scale: 1.2;
 }
 .contact-btn a i {
   font-size: 3rem;
@@ -757,12 +834,14 @@ input:hover, textarea:hover {
 }
 
 .submit {
-  background-color: transparent;
   opacity: 70%;
+  width: auto;
   border-radius: 20px;
-  padding: 20px 10px;
-  margin: 20px 0;
+  margin: 20px;
+  background-color: #000000;
   color: #fff;
+  border: none;
+  padding: 20px;
   line-height: 2;
   text-transform: uppercase;
   box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.973);
@@ -785,6 +864,8 @@ input:hover, textarea:hover {
 .back-top {
   display: flex;
   justify-content: center;
+}
+.back-top:hover {
   text-decoration: underline;
 }
 
