@@ -645,10 +645,10 @@ iframe{
         & .s {
             background-color: $color-blue;
         }
-        &.j{
+        & .j{
             background-color: $color-wine;
         }
-        &.p{
+        & .p{
             background-color: $color-dark-green;
         }
         & li{
@@ -667,6 +667,13 @@ iframe{
 
     .description{
         padding: 20px 40px 60px;
+        display: flex;
+        flex-wrap: wrap;
+}
+.d-btn{
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
 }
 //-------------------------------------------------------------------------------------------------------scs-scheme------------------------------------------------------------------------------------------------------------
     .scs-scheme{

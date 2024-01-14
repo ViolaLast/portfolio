@@ -10,10 +10,13 @@
     scale: 0.5 !important;
   }
   .description {
-    padding: 20px !important;
+    padding: 20px 20px 80px !important;
   }
   footer .f-text {
     padding: 20px !important;
+  }
+  .project {
+    margin: 30px 0px !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -27,6 +30,7 @@
   }
   .list li {
     width: 40% !important;
+    font-size: 14px !important;
   }
 }
 @media screen and (min-width: 992px) {
@@ -699,10 +703,10 @@ iframe {
 .list .s {
   background-color: #174174;
 }
-.list.j {
+.list .j {
   background-color: #741741;
 }
-.list.p {
+.list .p {
   background-color: #147147;
 }
 .list li {
@@ -720,6 +724,14 @@ iframe {
 
 .description {
   padding: 20px 40px 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.d-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .scription {
