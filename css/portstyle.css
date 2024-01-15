@@ -192,8 +192,8 @@ h4 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -204,41 +204,57 @@ h4 {
 .star1 {
   background: url(../images/stars/star1.png);
   animation-delay: 0s;
+  width: 100vw;
+  height: 100vh;
 }
 
 .star2 {
   background: url(../images/stars/star2.png);
   animation-delay: -1s;
+  width: 100vw;
+  height: 100vh;
 }
 
 .star3 {
   background: url(../images/stars/star3.png);
   animation-delay: -2s;
+  width: 100vw;
+  height: 100vh;
 }
 
 .star4 {
   background: url(../images/stars/star4.png);
   animation-delay: -3s;
+  width: 100vw;
+  height: 100vh;
 }
 
 .star5 {
   background: url(../images/stars/star5.png);
   animation-delay: -4s;
+  width: 100vw;
+  height: 100vh;
 }
 
 .star6 {
   background: url(../images/stars/star6.png);
   animation-delay: -5s;
+  width: 100vw;
+  height: 100vh;
 }
 
 .star7 {
   background: url(../images/stars/star7.png);
   animation-delay: -6s;
+  width: 100vw;
+  height: 100vh;
 }
 
 .star8 {
   background: url(../images/stars/star8.png);
   animation-delay: -7s;
+  width: 100vw;
+  height: 100vh;
 }
 
 @keyframes animate {
