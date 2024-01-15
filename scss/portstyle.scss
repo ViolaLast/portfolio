@@ -96,7 +96,6 @@ h4{
 }
 .star{
     position: absolute;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -334,6 +333,7 @@ height: 50%;
     z-index: -5;
     position: absolute;
     top: 50px;
+    z-index: 10;
 }
 .text-container{
 padding: 200px 0px 50px;
@@ -403,7 +403,7 @@ display: flex;
         position: absolute;
         left:0;
         height: 100%;
-        width: 100%;
+        width: 80%;
         background-color: $color-primary;
         animation: typing 3s steps(13) infinite;
 
@@ -435,6 +435,7 @@ display: flex;
         padding: 50px 0px;
         justify-content: space-around;
         align-self: center;
+        z-index: 10;
     }
     .p-h1{
 padding: 20px;
@@ -447,11 +448,13 @@ padding: 20px;
         flex-direction: column;
         justify-content: center;
         position: relative;
+        z-index: 10;
     }
 
     .self-img{
         display: flex;
         justify-content: center;
+        z-index: 10;
 
         & img{
             border-radius: 50%;
@@ -469,6 +472,7 @@ padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        z-index: 10;
     }
     .qualification{
         margin: 20px 0;
@@ -478,6 +482,7 @@ padding: 20px;
         flex-direction: column;
         background-color: $color-grey;
         justify-content: center;
+        z-index: 10;
     }
 
     .question{
