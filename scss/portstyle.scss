@@ -1,5 +1,4 @@
 
-
 //--------------------------------------------------------------------------------- Importing Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;900&display=swap');
 
@@ -28,6 +27,8 @@ $color-dark-green: #147147;
     list-style: none;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
+    scroll-behavior: smooth;
+    text-decoration: none;
 
     & a {
         text-decoration: none;
@@ -48,7 +49,6 @@ $color-dark-green: #147147;
     align-items: center;
     display:grid;
     letter-spacing: 4px;
-  
 }
 
 // ::-webkit-scrollbar {
@@ -698,8 +698,8 @@ justify-content: center;
       }
       .ch2{
        align-self: center;
-       line-height: 2rem;
        font-size: 26px;
+       display: flex;
 
 
       }

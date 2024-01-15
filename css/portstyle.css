@@ -86,13 +86,19 @@
     margin: 20px !important;
     align-self: stretch;
   }
+  .contact-input input, textarea {
+    width: 100% !important;
+  }
   .m1200 {
     max-width: 1200px;
     justify-content: center;
     align-items: center;
   }
-  .main {
+  .main, .f-text, .welcome {
     padding: 0 0 0 340px !important;
+  }
+  .menu-btn {
+    display: none !important;
   }
   .aboutme {
     padding: 50px 20px !important;
@@ -117,6 +123,8 @@
   list-style: none;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
+  scroll-behavior: smooth;
+  text-decoration: none;
 }
 * a {
   text-decoration: none;
@@ -781,8 +789,8 @@ iframe {
 
 .ch2 {
   align-self: center;
-  line-height: 2rem;
   font-size: 26px;
+  display: flex;
 }
 
 .contact-btn {

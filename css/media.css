@@ -85,13 +85,19 @@
     margin: 20px !important;
     align-self: stretch;
   }
+  .contact-input input, textarea {
+    width: 100% !important;
+  }
   .m1200 {
     max-width: 1200px;
     justify-content: center;
     align-items: center;
   }
-  .main {
+  .main, .f-text, .welcome {
     padding: 0 0 0 340px !important;
+  }
+  .menu-btn {
+    display: none !important;
   }
   .aboutme {
     padding: 50px 20px !important;
