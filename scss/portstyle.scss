@@ -418,7 +418,7 @@ display: flex;
         position: absolute;
         left:0;
         height: 100%;
-        width: 80%;
+        width: 100%;
         background-color: $color-primary;
         animation: typing 3s steps(13) infinite;
 
@@ -549,7 +549,7 @@ padding: 20px;
 
 .top {
     bottom: 100px;
-    left: -100%;
+    right: -30%;
 
 }
 
@@ -682,9 +682,6 @@ flex-wrap: nowrap;
 justify-content: center;
 }
 //-------------------------------------------------------------------------------------------------------scs-scheme------------------------------------------------------------------------------------------------------------
-    .scs-scheme{
-
-    }
     .scription{
         padding: 20px 40px 100px;
         text-align: left;
