@@ -6,7 +6,10 @@
     padding: 20px 10px 20px !important;
   }
   .text-container {
-    scale: 0.5 !important;
+    scale: 0.6 !important;
+  }
+  .wrapper {
+    scale: 0.6 !important;
   }
   .description {
     padding: 20px 20px 80px !important;
@@ -24,12 +27,15 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .list {
-    padding: 20px;
-  }
   .list li {
     width: 40% !important;
     font-size: 14px !important;
+  }
+  .answer {
+    width: 80% !important;
+  }
+  .chat-img {
+    margin: 20px 0 20px 10px !important;
   }
 }
 @media screen and (min-width: 992px) {
@@ -61,7 +67,8 @@
     align-self: stretch;
   }
   .m992 {
-    width: 992px;
+    max-width: 992px;
+    padding: 50px 20px !important;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -79,12 +86,25 @@
     align-self: stretch;
   }
   .m1200 {
-    width: 1200px;
+    max-width: 1200px;
     justify-content: center;
     align-items: center;
   }
   .main {
     padding: 0 0 0 340px !important;
+  }
+  .aboutme {
+    padding: 50px 20px !important;
+  }
+  .list li {
+    width: 100% !important;
+    font-size: 14px !important;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .list li {
+    width: 40% !important;
+    font-size: 14px !important;
   }
 }
 

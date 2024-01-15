@@ -7,7 +7,10 @@
     padding: 20px 10px 20px !important;
   }
   .text-container {
-    scale: 0.5 !important;
+    scale: 0.6 !important;
+  }
+  .wrapper {
+    scale: 0.6 !important;
   }
   .description {
     padding: 20px 20px 80px !important;
@@ -25,12 +28,15 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .list {
-    padding: 20px;
-  }
   .list li {
     width: 40% !important;
     font-size: 14px !important;
+  }
+  .answer {
+    width: 80% !important;
+  }
+  .chat-img {
+    margin: 20px 0 20px 10px !important;
   }
 }
 @media screen and (min-width: 992px) {
@@ -62,7 +68,8 @@
     align-self: stretch;
   }
   .m992 {
-    width: 992px;
+    max-width: 992px;
+    padding: 50px 20px !important;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -80,12 +87,25 @@
     align-self: stretch;
   }
   .m1200 {
-    width: 1200px;
+    max-width: 1200px;
     justify-content: center;
     align-items: center;
   }
   .main {
     padding: 0 0 0 340px !important;
+  }
+  .aboutme {
+    padding: 50px 20px !important;
+  }
+  .list li {
+    width: 100% !important;
+    font-size: 14px !important;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .list li {
+    width: 40% !important;
+    font-size: 14px !important;
   }
 }
 * {
@@ -138,6 +158,13 @@ body {
 h2 {
   justify-content: center;
   display: flex;
+}
+
+h4 {
+  font-weight: 900;
+  font-size: 70px;
+  color: #212427;
+  text-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
 }
 
 .background {
@@ -291,13 +318,6 @@ header {
   box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.45);
 }
 
-h4 {
-  font-weight: 900;
-  font-size: 70px;
-  color: #212427;
-  text-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
-}
-
 .user-img {
   height: 30vh;
   display: flex;
@@ -430,7 +450,7 @@ h4 {
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: auto;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -441,7 +461,7 @@ h4 {
 }
 
 .dynamic-txts {
-  margin-left: 15px;
+  margin-left: 5px;
   line-height: 90px;
   height: 90px;
   background: transparent;
@@ -472,7 +492,6 @@ h4 {
   height: 100%;
   width: 100%;
   background-color: #000000;
-  border-left: 2px solid #01ff2b;
   animation: typing 3s steps(13) infinite;
 }
 
@@ -485,11 +504,6 @@ h4 {
     right: 0;
   }
 }
-.stary {
-  background: url("imagesjeremy-thomas.jpg");
-  background-size: cover;
-}
-
 .main {
   background-color: #000000;
   color: #fff;
@@ -567,14 +581,12 @@ h4 {
   float: right;
   background-color: #01ff2b;
   color: #000000;
-  width: 80%;
   text-align: center;
   border-radius: 20px;
   padding: 20px 20px;
 }
 
 .chat-img {
-  margin: 20px 0 20px 10px;
   width: 50px;
   height: 50px;
   display: flex;
@@ -605,8 +617,7 @@ h4 {
 
 .top {
   bottom: 100px;
-  left: -40%;
-  right: -40%;
+  left: -100%;
 }
 
 .top::before {
@@ -814,7 +825,7 @@ iframe {
 .my-message i {
   float: right;
   font-size: 3rem;
-  margin: 20px;
+  margin: 10px;
   color: grey;
 }
 
