@@ -645,7 +645,7 @@ header {
 
 .top {
   bottom: 100px;
-  right: -20%;
+  left: -60%;
 }
 
 .top::before {
