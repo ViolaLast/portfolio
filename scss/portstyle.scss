@@ -187,6 +187,10 @@ z-index: 20;
             .side-menu{
                 display: flex;
             }
+
+            & i{  
+                color: $color-green;
+            }
         }
     }
 
@@ -197,7 +201,6 @@ z-index: 20;
     display: flex;
     justify-content: center;
     position: relative;
-    top: -15px;
     left: -5px;
     
 
@@ -206,9 +209,6 @@ z-index: 20;
     align-items: center;
     justify-content: center;
     color: $color-secondary;
-            &:hover{
-            color: $color-green;
-            }
         }
 }
 //-----------------------------------------------------------------------------------------------Side bar-----------------------------------------------------------------------------------------------------------------------
@@ -813,10 +813,7 @@ input, textarea{
     .back-top{
         display: flex;
         justify-content: center;
-        &:hover{
-        text-decoration: underline;
         }
-    }
     //-----------------------------------------------------------------------------Footer----------------------------------------------------------------------------------------------------------------------
 footer{
     position: relative;

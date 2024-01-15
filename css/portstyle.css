@@ -277,6 +277,9 @@ h4 {
 .menu-btn:hover .side-menu {
   display: flex;
 }
+.menu-btn:hover i {
+  color: #01ff2b;
+}
 
 .initials-wrap {
   width: auto;
@@ -285,7 +288,6 @@ h4 {
   display: flex;
   justify-content: center;
   position: relative;
-  top: -15px;
   left: -5px;
 }
 .initials-wrap i {
@@ -293,9 +295,6 @@ h4 {
   align-items: center;
   justify-content: center;
   color: #fff;
-}
-.initials-wrap i:hover {
-  color: #01ff2b;
 }
 
 header {
@@ -887,9 +886,6 @@ input:hover, textarea:hover {
 .back-top {
   display: flex;
   justify-content: center;
-}
-.back-top:hover {
-  text-decoration: underline;
 }
 
 footer {
