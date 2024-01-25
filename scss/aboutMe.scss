@@ -1,0 +1,130 @@
+ //----------------------------------------------------------------------------------About Me------------------------------------------------------------------------------------------------------------------------------------------
+    .main{
+        background-color: $color-primary;
+        color: $color-secondary;
+        padding: 50px 20px 50px 20px;
+        overflow-x: hidden;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .aboutme{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0px;
+        justify-content: space-around;
+        align-self: center;
+        z-index: 10;
+    }
+    .p-h1{
+padding: 20px;
+
+    }
+    .textbox{
+        border-radius: 40px;
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .self-img{
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+
+        & img{
+            border-radius: 50%;
+            width: 200px; 
+            height: 200px;
+            object-fit: cover;
+            opacity: 80%;
+            margin: 30px;
+            box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
+        }
+    }
+    .self{
+        margin: 20px 0;
+        padding:0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 10;
+    }
+    .qualification{
+        margin: 20px 0;
+        border-radius: 25px;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: $color-grey;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    .question{
+        justify-content: left;
+        float: left;
+        width: 80%;
+        background-color: lighten($color-grey, 20%);
+        border-radius: 20px;
+    padding: 0px 20px;
+     }
+     .answer{
+        justify-content: right;
+        float:right;
+        background-color: $color-green;
+        color:$color-primary;
+        text-align: center;
+        border-radius: 20px;
+        padding: 20px 20px;
+     }
+.chat-img{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    float: right;
+    & i{
+        font-size: 3rem;
+        color: grey;
+    }
+}
+
+
+//------------------------------------------------------------------------------About Me--hover------------------------------------------------------------------------------------
+.html, .css, .java, .ang, .web{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+    .tooltip-text {
+        visibility: hidden;
+        position: absolute;
+        z-index: 2;
+        width: 250px;
+    }
+
+    .hover-text:hover .tooltip-text {
+        visibility: visible;
+}
+
+.top {
+    bottom: 100px;
+    left: -40%;
+
+}
+
+//     .top::before {
+//         top: 80%;
+//         left: 45%;
+// }
+
+    .hover-text {
+        position: relative;
+        display: inline;
+        text-align: center;
+}

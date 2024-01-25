@@ -1,0 +1,113 @@
+//-----------------------------------------------------------------------------------------------Side bar-----------------------------------------------------------------------------------------------------------------------
+header{
+    display: none;
+    height: 100vh;
+    width: 50%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.side-menu{
+width: 100%;
+height: 100vh;   
+flex-direction: column;
+// justify-content: space-between;
+overflow: hidden;
+text-align: center;
+border-radius: 0 50px 50px 0;
+box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.45);
+}
+
+.user-img{
+    height:30vh;
+    display: flex;
+    justify-content: space-around;
+    padding:20px;
+}
+
+.image-wrap{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    align-items: center;
+    color: $color-secondary;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.45);
+    &:hover{
+        box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
+    }
+}
+
+.user-connect{
+    height:20vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    & a{
+        width: 130px;
+        height: 130px;
+        justify-content:center;
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: $color-secondary;
+    box-shadow: 6px 6px 6px 0px rgba(255, 255, 255, 0.45);
+    &:hover{
+        box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
+            }
+        & i{
+            height: 100% !important;
+            padding: 10px 10px !important;
+            width: 100% !important;
+            align-self: center;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            font-size: 60px;
+            }
+        }
+    }
+    .hover{
+        display: none;
+    }
+    .coding:hover{
+        background-color: $color-grey;
+        .hover{
+            display: inline;
+        }
+        .origin{
+            display: none;
+        }
+    }
+
+
+.sidebar-main{
+height: 50%;
+    display: flex;
+    background-color: $color-primary;
+    box-shadow: 0 0 10px $color-green ,0 0 0 0,0 0 80px $color-green, 0 0 0 0;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    & li{
+        display: flex;
+        font-size: 1.5rem;
+        line-height: 2.5;
+        flex-direction: column;
+        align-self: stretch;
+    }
+& a{
+    color: #818181;
+    display: block;
+    }
+}
+.nav:hover{
+    color:$color-green;
+    box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
+}

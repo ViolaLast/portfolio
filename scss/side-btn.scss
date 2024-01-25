@@ -1,0 +1,58 @@
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.btn-wrap{
+width: 100vw;
+padding: 0 20px;
+display: flex;
+justify-content: center;
+z-index: 20;
+cursor: pointer;
+}
+.menu-btn{
+    border: none;
+    position: fixed;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: $color-primary;
+    justify-content: center;
+    z-index: 3;
+    cursor: pointer;
+        box-shadow: rgba(255 254 254 / 17%) 0px -23px 25px 0px inset, rgba(255 254 254 / 15%) 0px -36px 30px 0px inset,
+        rgba(255 255 255 / 10%) 0px -79px 40px 0px inset, rgba(255 255 255 / 6%) 0px 2px 1px, rgba(255 255 255 / 9%) 0px 4px 2px, 
+        rgba(255 255 255 / 9%) 0px 8px 4px, rgb(255 255 255 / 9%) 0px 16px 8px, rgba(255 255 255 / 9%) 0px 32px 16px;
+    
+        &:hover{
+    box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
+            .side-menu{
+                display: flex;
+            }
+
+            & i{  
+                color: $color-green;
+            }
+        }
+    }
+
+.initials-wrap{
+    width: auto;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: -5px;
+    cursor: pointer;
+    
+
+        & i{
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    color: $color-secondary;
+    cursor: pointer;
+        }
+}

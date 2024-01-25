@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+<!--
+
+/$$    /$$ /$$           /$$                
+| $$   | $$|__/          | $$                
+| $$   | $$ /$$  /$$$$$$ | $$        /$$$$$$ 
+|  $$ / $$/| $$ /$$__  $$| $$       |____  $$
+ \  $$ $$/ | $$| $$  \ $$| $$        /$$$$$$$
+  \  $$$/  | $$| $$  | $$| $$       /$$__  $$
+   \  $/   | $$|  $$$$$$/| $$$$$$$$|  $$$$$$$
+    \_/    |__/ \______/ |________/ \_______/
+                                             
+  Author: Violeta Last
+  Created on: January 24, 2024
+  Description: This HTML file contains the code for [My Personal Portfolio].
+-->
+
         <meta charset="UTF-8">
         <meta name="description" content="Violeta Last's Web development skills Portfolio page">
         <meta name="keywords" content="HTML, CSS, JavaScript, web development">
@@ -10,18 +26,22 @@
         <link rel="stylesheet" href="css/portstyle.css">
         <link rel="stylesheet" href="css/normalize.css">
         <title>Violeta Last | Web Developer</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io\apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io\favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io\favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
     </head>
 
     <body>
         <div class="btn-wrap">
             <div class="menu-btn" >
-                <button type="button" class="initials-wrap"> 
+                <button type="button" role="side-menu" class="initials-wrap" id="toggleBtn"> 
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
             </div> 
         </div>
 <!------------------------------------------------------------------------------------side-bar------------------------------------------>              
-        <header>    
+        <header class="hidden-header">    
             <div class="side-menu">
                         <div class="user-img">
                             <div class="image-wrap">
@@ -103,7 +123,9 @@
                     
                 </div>  
         </div> 
-                
+                    <section>
+                        <a href="#portfolio" class="scroll-down" address="true"></a>
+                    </section>
                 <!--------------------------------------------About me------------------------------------------>
             <div class="main">
 
@@ -154,7 +176,7 @@
                                 <div class="hover-text">
                                     <a class="java">JavaScript</a>
                                     <span class="tooltip-text hidden-box top">
-                                        <img src="images/certificates/coding-foundation.png" alt="certificate">
+                                        <img src="images\certificates\c79a9030-64a4-45f8-8c7d-92d229c3d929.svg" alt="javaScript certificate">
                                     </span>
                                 </div>
                             </li>
@@ -218,7 +240,7 @@
                                     <div class="hover-text">
                                         <a class="ang">Angular</a>
                                         <span class="tooltip-text hidden-box top">
-                                            <img src="images/certificates/angular.png" alt="certificate">
+                                            <img src="images/certificates/angular.png" alt="Angular certificate">
                                         </span>
                                     </div>
                                 </li>
@@ -236,7 +258,7 @@
                         <!-- <div class="container"> -->
 
                         <div class="project pro1">
-                                <iframe src="https://violalast.github.io/Netmatters-Website/" class="netmatters" scrolling="no"></iframe>
+                                <iframe src="https://violalast.github.io/Netmatters-Website/" class="netmatters" scrolling="no" title="netmatters website replica"></iframe>
                                 <div class="description">
                                             <h3>Netmatters</h3>
                                             <p class="summary">Recreated the Netmatters homepage using HTML and SCSS...</p>
@@ -253,7 +275,7 @@
                         </div>
 
                         <div class="project pro2">
-                            <img src="images/soon.jpg" class="soon">
+                            <img src="images/soon.jpg" class="soon" alt="coming soon">
                             <div class="description">
                                         <h3>Coming Soon</h3>
                                         <p class="summary">Information on the project...</p>
@@ -351,8 +373,8 @@
                                 <h3 class="ch2">Contact Me</h3>
                                 
                                 <div class="contact-btn">
-                                   <a href="tel:'07521026016'"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
-                                    <a href="mailto:'vikinterior@hotmail.co.uk"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                   <a href="tel:'07521026016'"><i class="fa fa-phone-square" aria-hidden="true" name="my phone number"></i></a>
+                                    <a href="mailto:'vikinterior@hotmail.co.uk"><i class="fa fa-envelope" aria-hidden="true" name="my email address"></i></a>
                                 </div>
                             </div>
 
@@ -408,5 +430,7 @@
                                     </div>
                     
                         </footer>
+                        <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+                        <script type="text/javascript" src="js/myscripts.js"></script>
     </body>
 </html>

@@ -1,0 +1,92 @@
+//--------------------------------------------------------------------------------------------------Welcome Text-------------------------------------------------------------------------------------------------------
+
+.welcome{
+    width:100vw;
+    height:100vh;
+    z-index: -5;
+    position: absolute;
+    top: 50px;
+}
+.text-container{
+padding: 200px 0px 50px;
+height: 100%;
+justify-content: center;
+text-align: center;
+display: flex;
+}
+
+    .head-nav{
+        border: 1px solid $color-green;
+    }
+    .initials-top{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+    border-radius: 0 20px 0 0;
+    height: 25vh;
+    width: 100%;
+    background-color: $color-green;
+    box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
+    }
+    .wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+     overflow: hidden;
+}
+    
+    .static-txt{
+        color: $color-secondary;
+        font-size: 60px;
+        font-weight: 400;
+    }
+    .dynamic-txts{
+        margin-left: 5px;
+        line-height: 90px;
+        height: 90px;
+        background: transparent;
+        overflow: hidden;
+    }
+
+    .dynamic-txts li{
+        color: $color-green;
+        font-size: 60px;
+        font-weight: 500;
+        top:0;
+        position: relative;
+        animation: slide 12s steps(4) infinite;
+        & span{
+            font-weight:bold;
+        }
+    }
+        @keyframes slide {
+            100%{
+                top: -360px;
+            }
+            
+        }
+
+
+    .dynamic-txts li::after{
+        content:"";
+        position: absolute;
+        left:0;
+        height: 100%;
+        width: 100%;
+        background-color: $color-primary;
+        animation: typing 3s steps(13) infinite;
+
+    }
+
+    @keyframes typing{
+        40%, 60%{
+            left:calc(100%)
+        }
+        100%{
+            left:0;
+            right: 0;
+        }
+    }
