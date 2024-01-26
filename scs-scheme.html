@@ -6,23 +6,26 @@
         <meta name="keywords" content="HTML, CSS, JavaScript, web development">
         <meta name="author" content="Violeta Last">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://i.icomoon.io/public/temp/0f2db06252/UntitledProject/style.css" type="icons">
         <link rel="stylesheet" href="css\portstyle.css">
         <link rel="stylesheet" href="css\normalize.css">
         <title>Violeta Last | Web Developer</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io\apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io\favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io\favicon-16x16.png">
     </head>
 
     <body>
         <div class="btn-wrap">
             <div class="menu-btn" tooltip="1">
-                <button type="button" class="initials-wrap"> 
-                    <i class="fa fa-bars" aria-hidden="true"></i>
+                <button type="button" class="initials-wrap" id="toggleBtn"> 
+                    <i class="icon-menu" aria-hidden="true"></i>
                 </button>
             </div> 
         </div>
 <!------------------------------------------------------------------------------------side-bar------------------------------------------>              
 
-        <header>    
+        <header class="hidden-header">    
             <div class="side-menu">
                         <div class="user-img">
                             <div class="image-wrap">
@@ -39,35 +42,35 @@
 
                                         <li>
                                             <a href="index.html#aboutme" class="nav"> 
-                                            <i class="fa fa-user-circle" aria-hidden="true"></i>                                                       
+                                            <i class="icon-user1" aria-hidden="true"></i>                                                       
                                             <span >About Me</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="index.html#portfolio" class="nav">
-                                            <i class="fa fa-address-card" aria-hidden="true"></i>
+                                            <i class="icon-address-card" aria-hidden="true"></i>
                                             <span>My Portfolio</span></a>
                                         </li>
                                         <li>
                                             <a href="coding.html" class="nav">
-                                            <i class="fa fa-code" aria-hidden="true"></i>
+                                            <i class="icon-code" aria-hidden="true"></i>
                                             <span>Coding Examples</span></a>
                                         </li>
                                         <li>
                                             <a href="#scs-scheme" class="nav">
-                                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                            <i class="icon-graduate" aria-hidden="true"></i>
                                             <span>SCS Scheme</span></a>
                                         </li>
                                         <li>
                                             <a href="#contact-me" class="nav">
-                                            <i class="fa fa-address-book" aria-hidden="true"></i>
+                                            <i class="icon-address-book" aria-hidden="true"></i>
                                             <span>Contact Me</span></a>
                                         </li>
                                     </ul>
                     </div> 
                                 <div class="user-connect">
                                     <a href="https://www.linkedin.com/in/violeta-last-792185a8/" target="_blank">
-                                        <i class="indi fa fa-linkedin" aria-hidden="true"></i>
+                                        <i class="indi icon-linkedin2" aria-hidden="true"></i>
                                     </a>
                                 </div>  
             </div>
@@ -104,7 +107,9 @@
                     
                 </div>  
         </div> 
-                
+        <span class="arrowDown">
+            <a href="#scs-scheme" class="scroll-down" address="true"></a>
+        </span>
                 <!--------------------------------------------SCS Scheme------------------------------------------>
             <div class="main">
                 <div id="#scs-scheme" class="portfolio">
@@ -180,8 +185,8 @@
                                 <h3 class="ch2">Contact Me</h3>
                                 
                                 <div class="contact-btn">
-                                   <a href="tel:'07521026016'"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
-                                    <a href="mailto:'vikinterior@hotmail.co.uk"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                    <a href="tel:'07521026016'"><i class="icon-phone-square" aria-hidden="true" name="my phone number"></i></a>
+                                    <a href="mailto:'vikinterior@hotmail.co.uk"><i class="icon-envelope" aria-hidden="true" name="my email address"></i></a>
                                 </div>
                             </div>
 
@@ -192,7 +197,7 @@
                                             <div class="contact-input">
                                                 <div class="my-message">
                                                     <p class="answer textbox">leave a message below and I'll get back to you!</p>
-                                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                                    <i class="icon-user1" aria-hidden="true"></i>
                                                 </div>
 
                                                 <div class="form-input">
@@ -213,6 +218,11 @@
                             </div>
                                 <div class="bottom-head"></div>
                     </div>
+                    <div class="back-top">
+                        <a id="return" href="#welcome">
+                            <h2 class="submit">Back To Top</h2>
+                        </a>
+                    </div>
                 </div> 
                         <!-------------------------------------------------- footer ------------------------------------------------------>
                         <footer id="footer" class="footer">
@@ -232,5 +242,7 @@
                     
                         </footer>
                     </div>
+                    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+                    <script type="text/javascript" src="js/myscripts.js"></script>
     </body>
 </html>

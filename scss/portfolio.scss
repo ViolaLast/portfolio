@@ -11,9 +11,9 @@ margin-left: auto;
 margin-right: auto;
 max-width: 2000px;
 
-.container{
-    padding: 50px 0;
-}
+// .container{
+//     padding: 50px 0;
+// }
 
 .netmatters{
     border-radius: 15px 15px 0px 0px;
@@ -31,7 +31,7 @@ iframe{
         color: $color-secondary;
         flex-direction: column;
         background-color: $color-grey;
-        margin: 30px 20px;
+        margin: 30px 0px;
         position: relative;
         top: 0px;
         transition:top 0.5s;

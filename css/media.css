@@ -20,6 +20,12 @@
   .project {
     margin: 30px 0px !important;
   }
+  .nav-menu li {
+    font-size: small !important;
+  }
+  .answer {
+    width: 100% !important;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -34,8 +40,9 @@
   .answer {
     width: 80% !important;
   }
-  .chat-img {
-    margin: 20px 0 20px 10px !important;
+  .image-wrap {
+    width: 100%;
+    max-width: none;
   }
 }
 @media screen and (min-width: 992px) {
@@ -93,7 +100,7 @@
     justify-content: center;
     align-items: center;
   }
-  .main, .f-text, .welcome {
+  .main, .welcome, .arrowDown {
     padding: 0 0 0 340px !important;
   }
   .menu-btn {

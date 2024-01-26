@@ -1,9 +1,9 @@
 /* Error: Undefined variable.
  *    ,
- * 26 |         box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
- *    |                              ^^^^^^^^^^^^
+ * 21 |     border: 2px solid $color-secondary;
+ *    |                       ^^^^^^^^^^^^^^^^
  *    '
- *   scss\scroll-down-up.scss 26:30  root stylesheet */
+ *   scss\scroll-down-up.scss 21:23  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 26 \2502          box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;\d\a    \2502                               ^^^^^^^^^^^^\a    \2575 \a   scss\\scroll-down-up.scss 26:30  root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 21 \2502      border: 2px solid $color-secondary;\d\a    \2502                        ^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\scroll-down-up.scss 21:23  root stylesheet";
 }

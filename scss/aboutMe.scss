@@ -81,6 +81,7 @@ padding: 20px;
         text-align: center;
         border-radius: 20px;
         padding: 20px 20px;
+        width: 80%;
      }
 .chat-img{
     width: 50px;
@@ -89,15 +90,17 @@ padding: 20px;
     flex-direction: row;
     flex-wrap: nowrap;
     float: right;
+    margin: 20px 0px 0px 10px;
     & i{
         font-size: 3rem;
         color: grey;
+        border-radius: 50%;
     }
 }
 
 
 //------------------------------------------------------------------------------About Me--hover------------------------------------------------------------------------------------
-.html, .css, .java, .ang, .web{
+.html, .css, .java, .ang, .web, .py{
     text-decoration: underline;
     text-transform: uppercase;
 }

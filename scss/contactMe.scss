@@ -64,7 +64,7 @@
     display: flex;
     justify-content: right;
     float: right;
-    color: #000000;
+    color: $color-primary;
     width: 80%;
     text-align: center;
     margin: 10px;
@@ -73,6 +73,7 @@
         font-size: 3rem;
         margin: 10px;
         color: grey;
+        width: auto;
     }
 }
 

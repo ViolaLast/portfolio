@@ -7,6 +7,7 @@ display: flex;
 justify-content: center;
 z-index: 20;
 cursor: pointer;
+z-index: 999;
 }
 .menu-btn{
     border: none;
@@ -19,7 +20,7 @@ cursor: pointer;
     height: 100px;
     background-color: $color-primary;
     justify-content: center;
-    z-index: 3;
+    z-index: 60;
     cursor: pointer;
         box-shadow: rgba(255 254 254 / 17%) 0px -23px 25px 0px inset, rgba(255 254 254 / 15%) 0px -36px 30px 0px inset,
         rgba(255 255 255 / 10%) 0px -79px 40px 0px inset, rgba(255 255 255 / 6%) 0px 2px 1px, rgba(255 255 255 / 9%) 0px 4px 2px, 
@@ -44,7 +45,7 @@ cursor: pointer;
     display: flex;
     justify-content: center;
     position: relative;
-    left: -5px;
+    left: 1px;
     cursor: pointer;
     
 
