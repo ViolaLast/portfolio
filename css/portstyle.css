@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;900&display=swap");
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Rubik-Regular"), local("Rubik-Medium"), url("../RubikstaticRubik-Regular.ttf") format("woff");
+}
 @media screen and (max-width: 550px) {
   .contact-input input, textarea {
     width: 100% !important;
@@ -500,7 +505,7 @@ header {
 .static-txt {
   color: #fff;
   font-size: 60px;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .dynamic-txts {
@@ -693,10 +698,9 @@ header {
   border-radius: 15px 15px 0px 0px;
 }
 
-iframe {
+.netmatters {
   height: 400px;
   width: 100%;
-  scroll-behavior: none;
 }
 
 .project {
@@ -1113,11 +1117,6 @@ h4 {
   font-size: 300%;
   color: #212427;
   text-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
-}
-
-.netmatters {
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 footer {

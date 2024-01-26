@@ -23,6 +23,9 @@
         <meta name="author" content="Violeta Last">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://i.icomoon.io/public/temp/0f2db06252/UntitledProject/style.css" type="icons">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/portstyle.css">
         <link rel="stylesheet" href="css/normalize.css">
         <title>Violeta Last | Web Developer</title>
@@ -35,7 +38,7 @@
     <body>
         <div class="btn-wrap">
             <div class="menu-btn" >
-                <button type="button" role="side-menu" class="initials-wrap" id="toggleBtn"> 
+                <button type="button" role="side-menu" class="initials-wrap" id="toggleBtn" name="sideMenuBtn" role="menu-button"> 
                     <i class="icon-menu" aria-hidden="true"></i>
                 </button>
             </div>  
@@ -123,8 +126,8 @@
                 </div>
             </div>  
         </div> 
-                    <span class="arrowDown container m1200">
-                        <a href="#portfolio" class="scroll-down" address="true"></a>
+                    <span class="arrowDown">
+                        <a href="#portfolio" class="scroll-down" address="true" name="scroll-down"></a>
                     </span>
                 <!--------------------------------------------About me------------------------------------------>
             <div class="main">
@@ -241,7 +244,7 @@
                                     <div class="hover-text">
                                         <a class="ang">Angular</a>
                                         <span class="tooltip-text hidden-box top">
-                                            <img src="images/certificates/angular.png" alt="Angular certificate">
+                                            <img src="images\certificates\angular.svg" alt="Angular certificate">
                                         </span>
                                     </div>
                                 </li>
@@ -259,7 +262,7 @@
                         <!-- <div class="container"> -->
 
                         <div class="project pro1">
-                                <iframe src="https://violalast.github.io/Netmatters-Website/" class="netmatters" scrolling="no" title="netmatters website replica"></iframe>
+                            <img src="images\netmatters clone.png" class="netmatters" title="netmatters website replica">
                                 <div class="description">
                                             <h3>Netmatters</h3>
                                             <p class="summary">Recreated the Netmatters homepage using HTML and SCSS...</p>

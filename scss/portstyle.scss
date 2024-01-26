@@ -1,6 +1,10 @@
 
-//--------------------------------------------------------------------------------- Importing Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;900&display=swap');
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Rubik-Regular'), local('Rubik-Medium'), url("../Rubik\static\Rubik-Regular.ttf") format('woff');
+  }
 // ------------------------------------------------------------------Importing ----------------------------------------------------------
 
 @import "colors";
@@ -71,12 +75,6 @@ h4{
     color: $color-grey;
     text-shadow: 0 0 10px $color-secondary,0 0 40px $color-secondary,0 0 80px $color-secondary;
 }
-//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-.netmatters{
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
-
     //-----------------------------------------------------------------------------Footer----------------------------------------------------------------------------------------------------------------------
 footer{
     position: relative;
