@@ -1,10 +1,11 @@
 
 @font-face {
     font-family: 'Rubik';
+    src: url('../Rubik/static/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 400;
-    src: local('Rubik-Regular'), local('Rubik-Medium'), url("../Rubik\static\Rubik-Regular.ttf") format('woff');
-  }
+}
+
 // ------------------------------------------------------------------Importing ----------------------------------------------------------
 
 @import "colors";
@@ -27,11 +28,15 @@
     margin-left: 0;
     margin-right:0;
     list-style: none;
-    font-family: 'Rubik', sans-serif;
+    font-family: "RubikLocal",'Rubik', sans-serif;
     font-weight: 500;
     scroll-behavior: smooth;
     text-decoration: none;
+//    overflow-y: hidden;
 
+    #select-ul-country::-webkit-scrollbar {
+        display: none;
+    }
     & a {
         text-decoration: none;
         cursor: pointer;
@@ -72,7 +77,7 @@ h2{
 h4{
     font-weight:900;
     font-size: 300%;
-    color: $color-grey;
+    // color: $color-grey;
     text-shadow: 0 0 10px $color-secondary,0 0 40px $color-secondary,0 0 80px $color-secondary;
 }
     //-----------------------------------------------------------------------------Footer----------------------------------------------------------------------------------------------------------------------

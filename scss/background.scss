@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -3;
+    // z-index: -3;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -15,62 +15,69 @@
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: contain;
     width: 100vw;
     height: 100vh;
     pointer-events: none;
     overflow-x: hidden;
     overflow-y: hidden;
-    z-index: -1;
+    z-index: 1;
     animation: animate 7s ease-in-out infinite, 
             backgroundmove 16s linear infinite;
 }
 .star1{
     background: url(../images/stars/star1.png);
     animation-delay: 0s;
-    width: 100vw;
-    height: 100vh;
+    object-fit: contain;
 }
 .star2{
     background: url(../images/stars/star2.png);
     animation-delay: -1s;
     width: 100vw;
     height: 100vh;
+    object-fit: contain;
 }
 .star3{
     background: url(../images/stars/star3.png);
     animation-delay: -2s;
     width: 100vw;
     height: 100vh;
+    object-fit: contain;
 }
 .star4{
     background: url(../images/stars/star4.png);
     animation-delay: -3s;
     width: 100vw;
     height: 100vh;
+    object-fit: contain;
 }
 .star5{
     background: url(../images/stars/star5.png);
     animation-delay: -4s;
     width: 100vw;
     height: 100vh;
+    object-fit: contain;
 }
 .star6{
     background: url(../images/stars/star6.png);
     animation-delay: -5s;
     width: 100vw;
     height: 100vh;
+    object-fit: contain;
 }
 .star7{
     background: url(../images/stars/star7.png);
     animation-delay: -6s;
     width: 100vw;
     height: 100vh;
+    object-fit: contain;
 }
 .star8{
     background: url(../images/stars/star8.png);
     animation-delay: -7s;
     width: 100vw;
     height: 100vh;
+    object-fit: contain;
 }
 
 @keyframes animate{

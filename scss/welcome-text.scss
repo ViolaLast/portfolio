@@ -3,9 +3,9 @@
 .welcome{
     width:100vw;
     height:100vh;
-    z-index: -5;
+    // z-index: -5;
     position: absolute;
-    top: 50px;
+    // top: 111px;
 }
 .text-container{
 padding: 200px 0px 50px;
@@ -34,7 +34,7 @@ display: flex;
     text-align: center;
     display: flex;
     flex-direction: column;
-    width:100%;
+    width:100vw;
      overflow: hidden;
 }
 //=============================================================typing effect   
@@ -45,9 +45,8 @@ display: flex;
 
     }
     .dynamic-txts{
-        margin-left: 5px;
         line-height: 90px;
-        height: 90px;
+        // height: 90px;
         background: transparent;
         overflow: hidden;
     }
@@ -56,37 +55,75 @@ display: flex;
         color: $color-green;
         font-size: 60px;
         font-weight: 500;
-        top:0;
-        position: relative;
-        animation: slide 12s steps(4) infinite;
-        & span{
-            font-weight:bold;
-        }
     }
-        @keyframes slide {
-            100%{
-                top: -360px;
-            }
+  
+    .dynamic-txts {
+        li {
+          &::before {
+            content: "";
+            right: -8px;
+            top: 50%;
+            position: absolute;
+            color: $color-green;
+            height: 30px;
+            width: 2px;
+            transform: translateY(-50%);
+            animation: blink 0.7s infinite;
+          }
+          
+          &.stop-blinking::before {
+            animation: none;
+          }
         }
-
-
-    .dynamic-txts li::after{
-        content:"";
-        position: absolute;
-        left:0;
-        height: 100%;
-        width: 100%;
-        background-color: $color-primary;
-        animation: typing 3s steps(13) infinite;
-
+      }
+      
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      
+      .code-txts{
+        line-height: 90px;
+        height: 90px;
+        background: transparent;
+        overflow: hidden;
     }
-
-    @keyframes typing{
-        40%, 60%{
-            left:calc(100%)
-        }
-        100%{
-            left:0;
-            right: 0;
-        }
-    }
+      .code-txts li{
+        color: $color-green;
+          font-size: 60px;
+          font-weight: 500;
+          top:0;
+          position: relative;
+          animation: slide 12s steps(4) infinite;
+          & span{
+              font-weight:bold;
+          }
+      }
+          @keyframes slide {
+              100%{
+                  top: -360px;
+              }
+          }
+  
+  
+      .code-txts li::after{
+          content:"";
+          position: absolute;
+          left:0;
+          height: 100%;
+          width: 100%;
+          background-color: $color-primary;
+          animation: typing 3s steps(13) infinite;
+  
+      }
+  
+      @keyframes typing{
+          40%, 60%{
+              left:calc(100%)
+          }
+          100%{
+              left:0;
+              right: 0;
+          }
+      }

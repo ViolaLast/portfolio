@@ -8,12 +8,12 @@
 .contact-form{
     padding: 20px 10px 20px !important;
 }
-.text-container{
-    scale: 0.6 !important;
-}
-.wrapper{
-    scale:0.6 !important;
-}
+// .text-container{
+//     scale: 0.6 !important;
+// }
+// .wrapper{
+//     scale:0.6 !important;
+// }
 .description {
     padding: 20px 20px 80px!important;
 }
@@ -118,10 +118,12 @@ justify-content: center;
     justify-content: center;
     align-items: center;
 }
-.main, .welcome, .arrowDown{
+.main, .welcome{
     padding: 0 0 0 340px !important;
 }
-
+.scroll-down{
+    margin-left: 10% !important;
+}
 .menu-btn{
     display: none !important;
 }

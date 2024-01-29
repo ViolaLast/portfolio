@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -3;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -15,20 +14,20 @@
   position: absolute;
   top: 0;
   left: 0;
+  object-fit: contain;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
   overflow-x: hidden;
   overflow-y: hidden;
-  z-index: -1;
+  z-index: 1;
   animation: animate 7s ease-in-out infinite, backgroundmove 16s linear infinite;
 }
 
 .star1 {
   background: url(../images/stars/star1.png);
   animation-delay: 0s;
-  width: 100vw;
-  height: 100vh;
+  object-fit: contain;
 }
 
 .star2 {
@@ -36,6 +35,7 @@
   animation-delay: -1s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star3 {
@@ -43,6 +43,7 @@
   animation-delay: -2s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star4 {
@@ -50,6 +51,7 @@
   animation-delay: -3s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star5 {
@@ -57,6 +59,7 @@
   animation-delay: -4s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star6 {
@@ -64,6 +67,7 @@
   animation-delay: -5s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star7 {
@@ -71,6 +75,7 @@
   animation-delay: -6s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star8 {
@@ -78,6 +83,7 @@
   animation-delay: -7s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 @keyframes animate {

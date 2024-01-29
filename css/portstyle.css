@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Rubik";
+  src: url("../Rubik/static/Rubik-Regular.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  src: local("Rubik-Regular"), local("Rubik-Medium"), url("../RubikstaticRubik-Regular.ttf") format("woff");
 }
 @media screen and (max-width: 550px) {
   .contact-input input, textarea {
@@ -10,12 +10,6 @@
   }
   .contact-form {
     padding: 20px 10px 20px !important;
-  }
-  .text-container {
-    scale: 0.6 !important;
-  }
-  .wrapper {
-    scale: 0.6 !important;
   }
   .description {
     padding: 20px 20px 80px !important;
@@ -106,8 +100,11 @@
     justify-content: center;
     align-items: center;
   }
-  .main, .welcome, .arrowDown {
+  .main, .welcome {
     padding: 0 0 0 340px !important;
+  }
+  .scroll-down {
+    margin-left: 10% !important;
   }
   .menu-btn {
     display: none !important;
@@ -134,7 +131,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -3;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -143,20 +139,20 @@
   position: absolute;
   top: 0;
   left: 0;
+  object-fit: contain;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
   overflow-x: hidden;
   overflow-y: hidden;
-  z-index: -1;
+  z-index: 1;
   animation: animate 7s ease-in-out infinite, backgroundmove 16s linear infinite;
 }
 
 .star1 {
   background: url(../images/stars/star1.png);
   animation-delay: 0s;
-  width: 100vw;
-  height: 100vh;
+  object-fit: contain;
 }
 
 .star2 {
@@ -164,6 +160,7 @@
   animation-delay: -1s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star3 {
@@ -171,6 +168,7 @@
   animation-delay: -2s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star4 {
@@ -178,6 +176,7 @@
   animation-delay: -3s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star5 {
@@ -185,6 +184,7 @@
   animation-delay: -4s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star6 {
@@ -192,6 +192,7 @@
   animation-delay: -5s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star7 {
@@ -199,6 +200,7 @@
   animation-delay: -6s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 .star8 {
@@ -206,6 +208,7 @@
   animation-delay: -7s;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
 }
 
 @keyframes animate {
@@ -461,12 +464,71 @@ header {
     transform: translateY(-5px);
   }
 }
+.arrowUp {
+  width: 100%;
+}
+
+.scroll-up {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in 3s;
+  transition: all 0.5s ease-in 3s;
+}
+
+.scroll-up {
+  position: relative;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #fff;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.scroll-up:hover {
+  box-shadow: 0 0 10px #01ff2b, 0 0 40px #01ff2b, 0 0 80px #01ff2b;
+}
+
+.scroll-up:before {
+  position: relative;
+  top: calc(70% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(130deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid #fff;
+  border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
 .welcome {
   width: 100vw;
   height: 100vh;
-  z-index: -5;
   position: absolute;
-  top: 50px;
 }
 
 .text-container {
@@ -498,7 +560,7 @@ header {
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -509,9 +571,7 @@ header {
 }
 
 .dynamic-txts {
-  margin-left: 5px;
   line-height: 90px;
-  height: 90px;
   background: transparent;
   overflow: hidden;
 }
@@ -520,11 +580,44 @@ header {
   color: #01ff2b;
   font-size: 60px;
   font-weight: 500;
+}
+
+.dynamic-txts li::before {
+  content: "";
+  right: -8px;
+  top: 50%;
+  position: absolute;
+  color: #01ff2b;
+  height: 30px;
+  width: 2px;
+  transform: translateY(-50%);
+  animation: blink 0.7s infinite;
+}
+.dynamic-txts li.stop-blinking::before {
+  animation: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.code-txts {
+  line-height: 90px;
+  height: 90px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.code-txts li {
+  color: #01ff2b;
+  font-size: 60px;
+  font-weight: 500;
   top: 0;
   position: relative;
   animation: slide 12s steps(4) infinite;
 }
-.dynamic-txts li span {
+.code-txts li span {
   font-weight: bold;
 }
 
@@ -533,7 +626,7 @@ header {
     top: -360px;
   }
 }
-.dynamic-txts li::after {
+.code-txts li::after {
   content: "";
   position: absolute;
   left: 0;
@@ -555,7 +648,7 @@ header {
 .main {
   background-color: #000;
   color: #fff;
-  padding: 50px 20px 50px 20px;
+  padding: 50px 0px 50px 0px;
   overflow-x: hidden;
   justify-content: center;
   display: flex;
@@ -565,7 +658,7 @@ header {
 .aboutme {
   display: flex;
   flex-direction: column;
-  padding: 50px 0px;
+  padding: 50px 20px;
   justify-content: space-around;
   align-self: center;
   z-index: 10;
@@ -692,6 +785,7 @@ header {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
   max-width: 2000px;
 }
 .portfolio .netmatters {
@@ -699,8 +793,9 @@ header {
 }
 
 .netmatters {
-  height: 400px;
+  height: 300px;
   width: 100%;
+  object-fit: cover;
 }
 
 .project {
@@ -721,7 +816,7 @@ header {
 }
 
 .soon {
-  height: 400px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
@@ -804,7 +899,7 @@ header {
 .contact {
   margin-left: auto;
   margin-right: auto;
-  padding: 50px 0;
+  padding: 50px 20px;
 }
 
 .contact-box {
@@ -925,11 +1020,6 @@ input:hover, textarea:hover {
   display: flex;
   flex-direction: row;
   opacity: 70%;
-}
-
-.back-top {
-  display: flex;
-  justify-content: center;
 }
 
 @font-face {
@@ -1069,10 +1159,13 @@ input:hover, textarea:hover {
   margin-left: 0;
   margin-right: 0;
   list-style: none;
-  font-family: "Rubik", sans-serif;
+  font-family: "RubikLocal", "Rubik", sans-serif;
   font-weight: 500;
   scroll-behavior: smooth;
   text-decoration: none;
+}
+* #select-ul-country::-webkit-scrollbar {
+  display: none;
 }
 * a {
   text-decoration: none;
@@ -1115,7 +1208,6 @@ h2 {
 h4 {
   font-weight: 900;
   font-size: 300%;
-  color: #212427;
   text-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
 }
 
