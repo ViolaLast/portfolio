@@ -5,6 +5,23 @@
     font-weight: normal;
     font-style: normal;
 }
+//--------------------------------------------------------------------Mixings------------------------------------------------------
+@mixin portBtn {
+    background-color: $color-primary;
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    opacity: 70%;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 20px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    box-shadow: 6px 6px 6px 0px rgb(16, 14, 14);
+}
 
 // ------------------------------------------------------------------Importing ----------------------------------------------------------
 
@@ -29,7 +46,7 @@
     margin-right:0;
     list-style: none;
     font-family: "RubikLocal",'Rubik', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     scroll-behavior: smooth;
     text-decoration: none;
 //    overflow-y: hidden;
@@ -63,6 +80,7 @@
     flex-direction: column;
     overflow-x: hidden;
     background-color: $color-primary;
+    padding: 50px 20px;
 }
 .hidden{
     display: none;

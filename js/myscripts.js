@@ -38,7 +38,7 @@ function validateForm() {
 }
 //=====================================================================Typing Effect
 
-const dynamicText = document.querySelector(".dynamic-txts span");
+const dynamicText = document.querySelector(".dynamic-txts li span");
 const words = ["Violeta Last", "Creative", "Designer", "Developer"];
 
 let wordIndex = 0;
@@ -68,5 +68,5 @@ const typeEffect = () => {
     }
 }
 
-typeEffect();
+document.addEventListener("DOMContentLoaded", typeEffect);
 

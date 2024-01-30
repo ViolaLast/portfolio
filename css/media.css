@@ -1,3 +1,15 @@
+@media screen and (max-height: 700px) {
+  .text-container {
+    padding: 125px 0px 50px !important;
+    scale: 0.7;
+  }
+  .h360 {
+    scale: 0.7 !important;
+  }
+  .nav-menu a {
+    font-size: 11px;
+  }
+}
 @media screen and (max-width: 550px) {
   .contact-input input, textarea {
     width: 100% !important;
@@ -98,7 +110,7 @@
     padding: 0 0 0 340px !important;
   }
   .scroll-down {
-    margin-left: 10% !important;
+    margin-left: 7% !important;
   }
   .menu-btn {
     display: none !important;

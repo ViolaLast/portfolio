@@ -9,12 +9,9 @@ margin-right: 0;
 text-align: center;
 margin-left: auto;
 margin-right: auto;
-padding: 0 20px;
 max-width: 2000px;
+padding: 50px 0px;
 
-// .container{
-//     padding: 50px 0;
-// }
 
 .netmatters{
     border-radius: 15px 15px 0px 0px;
@@ -52,25 +49,16 @@ max-width: 2000px;
 }
             
 .view{
-    background-color: $color-primary;
-    display: flex;
-    width: 80%;
-    flex-wrap: wrap;
-    opacity: 70%;
-    border-radius: 20px;
-    justify-content: center;
-    padding: 20px 10px;
-    color: #fff;
-    text-transform: uppercase;
-    position: absolute;
-    bottom: 20px;
-    box-shadow: 6px 6px 6px 0px rgb(16, 14, 14);
-
+@include portBtn ;
     &:hover{
-        background-color: $color-green;
         box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
 
 }
+}
+.viewS{
+    @include portBtn;
+    bottom:50px;
+    margin-top: auto;
 }
 
 .list{
