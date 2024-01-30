@@ -80,7 +80,7 @@
     flex-wrap: wrap;
     flex-direction: row !important;
   }
-  .project {
+  .project, .code {
     width: 45% !important;
     margin: 20px !important;
     align-self: stretch;
@@ -239,6 +239,136 @@
     transform: scale(2);
   }
 }
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?kwti4z");
+  src: url("../fonts/icomoon.eot?kwti4z#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?kwti4z") format("truetype"), url("../fonts/icomoon.woff?kwti4z") format("woff"), url("../fonts/icomoon.svg?kwti4z#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu2:before {
+  content: "\e907";
+}
+
+.icon-phone_in_talk:before {
+  content: "\e903";
+}
+
+.icon-user1:before {
+  content: "\f007";
+}
+
+.icon-phone-square:before {
+  content: "\f098";
+}
+
+.icon-envelope:before {
+  content: "\f0e0";
+}
+
+.icon-code1:before {
+  content: "\f121";
+}
+
+.icon-graduation-cap:before {
+  content: "\f19d";
+}
+
+.icon-mortar-board:before {
+  content: "\f19d";
+}
+
+.icon-address-book:before {
+  content: "\f2b9";
+}
+
+.icon-address-card:before {
+  content: "\f2bb";
+}
+
+.icon-vcard:before {
+  content: "\f2bb";
+}
+
+.icon-address-card-o:before {
+  content: "\f2bc";
+}
+
+.icon-vcard-o:before {
+  content: "\f2bc";
+}
+
+.icon-envelope1:before {
+  content: "\e900";
+}
+
+.icon-graduate:before {
+  content: "\e901";
+}
+
+.icon-hat:before {
+  content: "\e901";
+}
+
+.icon-code:before {
+  content: "\e902";
+}
+
+.icon-menu:before {
+  content: "\e905";
+}
+
+.icon-menu1:before {
+  content: "\e906";
+}
+
+.icon-linkedin-with-circle:before {
+  content: "\e904";
+}
+
+.icon-code:before {
+  content: "\e902";
+}
+
+.icon-menu:before {
+  content: "\e905";
+}
+
+.icon-profile:before {
+  content: "\e923";
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+
+.icon-user:before {
+  content: "\e971";
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
 .btn-wrap {
   width: 100vw;
   padding: 0 20px;
@@ -375,16 +505,6 @@ header {
   display: none;
 }
 
-.coding:hover {
-  background-color: #212427;
-}
-.coding:hover .hover {
-  display: inline;
-}
-.coding:hover .origin {
-  display: none;
-}
-
 .sidebar-main {
   height: 50%;
   display: flex;
@@ -505,6 +625,10 @@ header {
 }
 .scroll-up:hover {
   box-shadow: 0 0 10px #01ff2b, 0 0 40px #01ff2b, 0 0 80px #01ff2b;
+}
+
+.margin {
+  margin-top: 30px;
 }
 
 .scroll-up:before {
@@ -872,6 +996,9 @@ header {
   bottom: 50px;
   margin-top: auto;
 }
+.viewS:hover {
+  box-shadow: 0 0 10px #01ff2b, 0 0 40px #01ff2b, 0 0 80px #01ff2b;
+}
 
 .list {
   padding: 20px;
@@ -925,6 +1052,26 @@ header {
   list-style: inside;
   padding: 2px;
   list-style-image: url("..imagesnetmatters.png");
+}
+
+pre {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  height: 600px;
+}
+
+.code {
+  margin: 30px 0;
+  background-color: #000;
+  box-shadow: 0 0 10px #01ff2b, 0 0 0 0, 0 0 80px #01ff2b, 0 0 0 0;
+  border-radius: 15px;
+}
+
+.code-txt {
+  padding: 20px 30px;
+  width: auto;
+  margin-bottom: 30px;
 }
 
 .contact {
@@ -1051,136 +1198,6 @@ input:hover, textarea:hover {
   display: flex;
   flex-direction: row;
   opacity: 70%;
-}
-
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?kwti4z");
-  src: url("../fonts/icomoon.eot?kwti4z#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?kwti4z") format("truetype"), url("../fonts/icomoon.woff?kwti4z") format("woff"), url("../fonts/icomoon.svg?kwti4z#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-[class^=icon-], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-menu2:before {
-  content: "\e907";
-}
-
-.icon-phone_in_talk:before {
-  content: "\e903";
-}
-
-.icon-user1:before {
-  content: "\f007";
-}
-
-.icon-phone-square:before {
-  content: "\f098";
-}
-
-.icon-envelope:before {
-  content: "\f0e0";
-}
-
-.icon-code1:before {
-  content: "\f121";
-}
-
-.icon-graduation-cap:before {
-  content: "\f19d";
-}
-
-.icon-mortar-board:before {
-  content: "\f19d";
-}
-
-.icon-address-book:before {
-  content: "\f2b9";
-}
-
-.icon-address-card:before {
-  content: "\f2bb";
-}
-
-.icon-vcard:before {
-  content: "\f2bb";
-}
-
-.icon-address-card-o:before {
-  content: "\f2bc";
-}
-
-.icon-vcard-o:before {
-  content: "\f2bc";
-}
-
-.icon-envelope1:before {
-  content: "\e900";
-}
-
-.icon-graduate:before {
-  content: "\e901";
-}
-
-.icon-hat:before {
-  content: "\e901";
-}
-
-.icon-code:before {
-  content: "\e902";
-}
-
-.icon-menu:before {
-  content: "\e905";
-}
-
-.icon-menu1:before {
-  content: "\e906";
-}
-
-.icon-linkedin-with-circle:before {
-  content: "\e904";
-}
-
-.icon-code:before {
-  content: "\e902";
-}
-
-.icon-menu:before {
-  content: "\e905";
-}
-
-.icon-profile:before {
-  content: "\e923";
-}
-
-.icon-phone:before {
-  content: "\e942";
-}
-
-.icon-user:before {
-  content: "\e971";
-}
-
-.icon-github:before {
-  content: "\eab0";
-}
-
-.icon-linkedin2:before {
-  content: "\eaca";
 }
 
 * {

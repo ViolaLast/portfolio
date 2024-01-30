@@ -92,11 +92,11 @@ justify-content: center;
     flex-wrap: wrap;
     flex-direction: row !important;
 }
-.project{
+.project, .code{
     width: 45% !important;
     margin: 20px !important;
     align-self: stretch;
-  }
+}
 .m992{
     max-width: 992px;
     padding: 50px 20px !important;

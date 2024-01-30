@@ -101,7 +101,7 @@
                                     <li><span> Creating </span></li>
                                     <li><span> Learning </span></li>
                                     <li><span> Building </span></li>
-                                    <li><span> Coming Soon </span></li>
+                                    <li><span> Progressing </span></li>
                                 </ul>
                             </div>
                         </div>
@@ -115,9 +115,97 @@
 <!--================================================================About me============================================================-->
             <div class="main">
                 <div class="container">
-                <div class="coding m1200" id="codingExamples">
-                    <h2 class="p-h1">COMING SOON</h2>
-                </div>
+                    <div class="code m1200" id="codingExamples">
+                        <h2 class="p-h1">JavaScript (Validation)</h2>
+
+                                <div class="">
+    <code>
+        <pre>
+    function validateForm() {
+        var firstName = document.getElementById('first-name').value;
+        var lastName = document.getElementById('last-name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('contact-message').value;
+    
+        // =========================Check if required fields are empty
+        if (firstName.trim() === '' || lastName.trim() === '' 
+        || email.trim() === '' || message.trim() === '') {
+            alert('Please fill in all required fields.');
+            return;
+        }
+    
+        //=================================Validate email using regex
+        
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        alert('Form submitted successfully!');
+    };
+        </pre> 
+    </code>
+    <br>
+                                        </div>  
+                            <p class="code-txt">
+                                The above code was used in my portfolio to validate the contact me form. 
+                                The purpose of this function is to ensure that the user has entered valid information
+                                in the specified form fields before allowing the form to be submitted. 
+                                It provides feedback to the user through alert messages in case of errors and success. 
+                            </p>  
+                        
+                    </div>
+
+                    <div class="code m1200" id="codingExamples">
+                        <h2 class="p-h1">JavaScript (Typing Effect)</h2>
+
+                                <div class="">
+    <code>
+        <pre>
+    const dynamicText = document.querySelector(".dynamic-txts li span");
+    const words = ["Violeta Last", "Creative", "Designer", "Developer"];
+
+    let wordIndex = 0;
+    let charIndex = 1;
+    let isDeleting = false;
+
+    const typeEffect = () => {
+        const currentWord = words[wordIndex];
+        const currentChar = currentWord.substring(0, charIndex);
+        dynamicText.textContent = currentChar;
+        dynamicText.classList.add("stop-blinking");
+
+        if (!isDeleting && charIndex < currentWord.length) {
+            // If condition is true, type the next character
+            charIndex++;
+            setTimeout(typeEffect, 200);
+
+        } else if (isDeleting && charIndex > 0) {
+            charIndex--;
+            setTimeout(typeEffect, 100);
+
+        } else {
+            isDeleting = !isDeleting;
+            dynamicText.classList.remove("stop-blinking");
+            wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+            setTimeout(typeEffect, 1200);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", typeEffect);
+
+        </pre> 
+    </code>
+                                </div>
+    <br>
+                            <p class="code-txt">
+                                The above code was used in my portfolio, this script creates a dynamic
+                                and animated text display with a typewriter effect, cycling through a predefined array of words.
+                                The text is typed, then deleted, and the process continues in a loop.
+                            </p>  
+                        </div>   
+                    
 
 <!--===========================================================================Contact Me=====================================================================-->       
                     <div id="contact-me" class="contact m992">
@@ -127,7 +215,7 @@
                                 <h3 class="ch2">Contact Me</h3>
                                 
                                 <div class="contact-btn">
-                                   <a href="tel:'07521026016'"><i class="icon-phone-square" aria-hidden="true"></i></a>
+                                    <a href="tel:'07521026016'"><i class="icon-phone-square" aria-hidden="true"></i></a>
                                     <a href="mailto:'vikinterior@hotmail.co.uk"><i class="icon-envelope" aria-hidden="true"></i></a>
                                 </div>
                             </div>
@@ -147,13 +235,13 @@
                                                 <div class="form-input">
                                                     <input type="text" id="first-name" name="first_name" placeholder="First name*" required >
                                                     <input type="text" id="last-name" name="last_name" placeholder="Last name*" required  >
-                                               
+                                            
                                                     <input type="email" id="email" name="email" placeholder="Email address*" required >
                                                     <input type="text" id="subject" name="subject" placeholder="Subject" >
 
                                                     <textarea id="contact-message" name="message" placeholder="Message*" required ></textarea>
                                             
-                                                    <button class="submit" type="submit"><b>Submit</b></button>
+                                                    <button class="submit" type="submit" onclick="validateForm()"><b>Submit</b></button>
                                                 </div>
                                             </div>
                                         </form>    
@@ -162,13 +250,15 @@
                             </div>
                                 <div class="bottom-head"></div>
                     </div>
-                    <span class="arrowUp">
-                        <a href="#coding" class="scroll-up" id="scroll-up"></a>
-                    </span>
+                    <div class="margin">
+                        <span class="arrowUp">
+                            <a href="#coding" class="scroll-up" id="scroll-up"></a>
+                        </span>
+                    </div>
                 </div> 
 <!--============================================================================= footer =============================================================================-->
 
-                <footer id="footer" class="footer">
+                <footer id="footer" class="footer container">
                             <div class="background">
                                     <div class="star star1"></div>
                                     <div class="star star2"></div>
@@ -186,5 +276,6 @@
 
                     <script src="js/jquery-3.7.1.min.js"></script>
                     <script src="js/myscripts.js"></script>
+            </div>
     </body>
 </html>
