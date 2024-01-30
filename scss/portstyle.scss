@@ -87,6 +87,10 @@
     display: none;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 //------------------------------------------------------------------------------------------------h1-h6
 h2{
     justify-content: center;
