@@ -108,19 +108,21 @@
                     </div>
                     
                 </div>  
-        </div> 
+        
         <span class="arrowDown">
             <a href="#codingExamples" class="scroll-down"></a>
         </span>
 <!--================================================================About me============================================================-->
             <div class="main">
                 <div class="container">
-                    <div class="code m1200" id="codingExamples">
+                    <div class="code m1200 codingExamples">
                         <h2 class="p-h1">JavaScript (Validation)</h2>
 
                                 <div class="">
-    <code>
-        <pre>
+    
+    <pre>
+        <code>
+        
     function validateForm() {
         var firstName = document.getElementById('first-name').value;
         var lastName = document.getElementById('last-name').value;
@@ -144,10 +146,11 @@
         }
         alert('Form submitted successfully!');
     };
-        </pre> 
-    </code>
+        </code>
+    </pre> 
     <br>
                                         </div>  
+                                        
                             <p class="code-txt">
                                 The above code was used in my portfolio to validate the contact me form. 
                                 The purpose of this function is to ensure that the user has entered valid information
@@ -157,12 +160,12 @@
                         
                     </div>
 
-                    <div class="code m1200" id="codingExamples">
+                    <div class="code m1200 codingExamples">
                         <h2 class="p-h1">JavaScript (Typing Effect)</h2>
 
                                 <div class="">
-    <code>
         <pre>
+            <code>
     const dynamicText = document.querySelector(".dynamic-txts li span");
     const words = ["Violeta Last", "Creative", "Designer", "Developer"];
 
@@ -176,7 +179,7 @@
         dynamicText.textContent = currentChar;
         dynamicText.classList.add("stop-blinking");
 
-        if (!isDeleting && charIndex < currentWord.length) {
+        if (!isDeleting && charIndex <currentWord.length) {
             // If condition is true, type the next character
             charIndex++;
             setTimeout(typeEffect, 200);
@@ -194,9 +197,8 @@
     }
 
     document.addEventListener("DOMContentLoaded", typeEffect);
-
+            </code>
         </pre> 
-    </code>
                                 </div>
     <br>
                             <p class="code-txt">
