@@ -13,9 +13,14 @@ use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+ include '.gitignore';
 
 // Create a new PHPMailer instance
 $mail = new PHPMailer(true);
+
+            // Initialize the success message variable
+            $success_message = "";
+            $errors = array();
 
     try {
     // Configure SMTP settings
@@ -32,22 +37,14 @@ $mail = new PHPMailer(true);
     echo "Oops! Something went wrong while configuring SMTP settings: " . $e->getMessage();
     exit();
 }
-
-// Initialize the success message variable
-$success_message = "";
-$errors = array();
-
-// If the form is successfully submitted and there are no errors, set the success message
-if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($errors)) {
-    $success_message = "Form submitted successfully!";
-}
-// Function to sanitize input data
-function validate_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+//===============================================================ENV CONNECTION END=======================================================//
+    // Function to sanitize input data
+    function validate_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate form fields
@@ -70,12 +67,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($message)) {
         $errors[] = "Message is required.";
     }
+      // If there are errors, clear success message
+      if (!empty($errors)) {
+        $success_message = ""; 
+    }
 
+//=============================================================FORM VALIDATION END=================================================//
     // If there are no errors, send email
     if (empty($errors)) {
         try {
             //Recipient
-            $mail->setFrom($email, $first_name . ' ' . $last_name);
+            $mail->setFrom('vikinterior@hotmail.co.uk', 'Violeta Last');
             $mail->addAddress('vikinterior@hotmail.co.uk'); // email address
 
             // Content
@@ -88,32 +90,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                           "Message: " . $message;
 
             $mail->send();
-
             // success message
             $success_message = "Form submitted successfully!";
-            $errors = array();
 
+//                  // Clear form data after successful submission
+// unset($_POST["first_name"]);
+// unset($_POST["last_name"]);
+// unset($_POST["email"]);
+// unset($_POST["subject"]);
+// unset($_POST["message"]);
 
-            
-            
-     // Clear form data after successful submission
-unset($_POST["first_name"]);
-unset($_POST["last_name"]);
-unset($_POST["email"]);
-unset($_POST["subject"]);
-unset($_POST["message"]);
+// Clear form data after successful submission
+$_POST = [];
 
-// After sending the email successfully
-echo '<script>window.location.href = "index.php#contact-form";</script>';
+// Set a session variable to indicate successful submission
+$_SESSION['success'] = true;
 
-   } catch (Exception $e) {
-       echo "Oops! Something went wrong while processing your request. Please try again later.";
-       // Handle PHPMailer exception
-   }
-    } else {
-        // Display validation errors
-        foreach ($errors as $error) {
-            echo $error . "<br>";
-        }
-    }
+//         // After sending the email successfully
+// echo '<script>window.location.href = "index.php";</script>';
+
+} catch (Exception $e) {
+    echo "Oops! Something went wrong while processing your request. Please try again later.";
+    // Handle PHPMailer exception
+}
+} else {
+// Display validation errors
+foreach ($errors as $error) {
+    echo $error . "<br>";
+}
+}
 }

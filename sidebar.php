@@ -11,7 +11,7 @@
             <div class="side-menu">
                         <div class="user-img h360">
                             <div class="image-wrap">
-                                <a href="index.html#welcome"> 
+                                <a href="index.php#welcome"> 
                                     <div>
                                         <h4>VL</h4>
                                     </div>  

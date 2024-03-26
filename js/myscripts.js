@@ -94,20 +94,18 @@ document.addEventListener("DOMContentLoaded", typeEffect);
 
 //=========================================================================================================================================================
 
-// Check if the form has been submitted successfully
-    var successMessage = "<?php echo !empty($success_message) ? 'true' : 'false'; ?>";
-
-    // If the form was submitted successfully, clear the form fields
+document.addEventListener('DOMContentLoaded', function() {
+    // Clear form fields
+    document.getElementById('contact-form').reset();
+    
+    // Check if there is a success message in the session
+    const successMessage = "<?php echo isset($_SESSION['success']) && $_SESSION['success'] ? 'true' : 'false'; ?>";
     if (successMessage === 'true') {
-        document.getElementById("contactForm").reset();
+        // Display success message
+        // For example, you can show an alert
+        alert('Form submitted successfully!');
+        // Clear the session variable
+        <?php unset($_SESSION['success']); ?>
     }
-
-    function clearFormFields() {
-
-        document.getElementById('contact-form').reset();
-    }
-
-    window.onload = function() {
-        // Clear form fields on page reload
-        document.getElementById('contact-form').reset();
-    }
+});
+    

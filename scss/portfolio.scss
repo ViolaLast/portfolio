@@ -55,9 +55,18 @@ padding: 50px 0px;
 
 }
 }
+
+.buttons{
+    display: flex;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+
 .viewS{
     @include portBtn;
-    bottom:50px;
+    bottom:30px;
+    position: absolute;
     margin-top: auto;
     &:hover{
         box-shadow: 0 0 10px $color-green,0 0 40px $color-green,0 0 80px $color-green;
@@ -93,7 +102,7 @@ padding: 50px 0px;
     }
 
     .description{
-        padding: 20px 40px 60px;
+        padding: 20px 40px 40px;
         display: flex;
         flex-wrap: wrap;
 }

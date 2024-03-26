@@ -972,13 +972,17 @@ header {
   padding: 10px 10px;
   color: #fff;
   text-transform: uppercase;
-  position: absolute;
-  bottom: 20px;
   left: 10%;
   box-shadow: 6px 6px 6px 0px rgb(16, 14, 14);
 }
 .view:hover {
   box-shadow: 0 0 10px #01ff2b, 0 0 40px #01ff2b, 0 0 80px #01ff2b;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: space-evenly;
 }
 
 .viewS {
@@ -992,11 +996,10 @@ header {
   padding: 10px 10px;
   color: #fff;
   text-transform: uppercase;
-  position: absolute;
-  bottom: 20px;
   left: 10%;
   box-shadow: 6px 6px 6px 0px rgb(16, 14, 14);
-  bottom: 50px;
+  bottom: 30px;
+  position: absolute;
   margin-top: auto;
 }
 .viewS:hover {
@@ -1032,7 +1035,7 @@ header {
 }
 
 .description {
-  padding: 20px 40px 60px;
+  padding: 20px 40px 40px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1061,7 +1064,7 @@ pre {
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  height: 400px;
+  height: 350px;
   background-color: #212427;
 }
 

@@ -12,7 +12,7 @@
 
                                 <div>
                                     <div class="contact-info">
-                                        <form class="contact-form" id="contact-form" onsubmit="return validateForm()"  method="post" onsubmit="return validateForm()" action="">
+                                        <form class="contact-form" id="contact-form" onsubmit="return validateForm()"  method="post" action="">
 
                                         <div class="messages">
     <div class="error" id="errorMessage">
@@ -24,7 +24,6 @@
         <?php endif; ?>
     </div>
 </div>
-
 
                                             <div class="contact-input">
                                                 <div class="my-message">

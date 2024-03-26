@@ -60,11 +60,11 @@
                                                 complete training within six to nine months. The course is intensive and therefore the
                                                 level of learning achieved is extensive in a short space of time.
                                             </p>
-                                    <span>
+                                    <button class="viewS">
                                         <a href="https://www.netmatters.co.uk/scions-coalition-scheme" target="_blank">
-                                            <span class="viewS">View more</span>
+                                            View more
                                         </a>
-                                    </span>
+                                    </button>
                                 </div>
                             </div>
 
@@ -79,11 +79,11 @@
                                             By completing courses users can earn points, allowing them to track their progress and
                                             see how much they've covered in certain areas.
                                         </p>
-                                <span>
+                                <button class="viewS">
                                     <a href="https://teamtreehouse.com/profiles/lastvioleta" target="_blank">
-                                        <span class="viewS">View more</span>
+                                        View more
                                     </a>
-                                </span>
+                                </button>
                             </div>
                         </div>
 
@@ -100,11 +100,11 @@
                                                 <li>Broad spectrum of clients, working nationwide</li>
                                                 <li>Operate to strict company values</li>
                                             </ul>
-                            <div>
+                            <button class="viewS">
                                 <a href="https://netmatters.co.uk" target="_blank">
-                                    <span class="viewS">View more</span>
+                                    View more
                                 </a>
-                            </div>
+                            </button>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'head.php';?>
-   
-    <body  onload="clearFormFields()">
+
+    <body>
+    <?php include 'emailto.php';?>
     <?php include 'sidebar.php';?>
-<?php include 'emailto.php';?>
 <!--==========================================================================BACKGROUND==================================================-->       
         <div class="background">
 
@@ -202,8 +202,7 @@
                                         <li class="j">JavaScript</li>
                                         <li class="p">PHP</li>
                                     </ul> 
-                            </div>   
-                            </div>     
+                            
                                         <div class="buttons">
                                                 <button class="view">
                                                     <a href="https://netmatters.violeta-last.netmatters-scs.co.uk/ContactUs.php" target="_blank" class="d-btn">
@@ -217,9 +216,9 @@
                                                 </a>
                                             </button>
                                         </div>
-                                
+                            </div>   
                         </div>
-
+                    </div>
                         <div class="project pro3">
                             <img src="images/array.png" title="description" class="netmatters" alt="array project">
                             <div class="description">
