@@ -100,12 +100,9 @@
     max-width: 340px;
   }
   .project {
-    width: 30% !important;
+    width: 45% !important;
     margin: 20px !important;
     align-self: stretch;
-  }
-  .contact-input input, textarea {
-    width: 100% !important;
   }
   .m1200 {
     max-width: 1200px;
@@ -967,12 +964,12 @@ header {
 .view {
   background-color: #000;
   display: flex;
-  width: 80%;
+  width: 45%;
   flex-wrap: wrap;
   opacity: 70%;
   border-radius: 20px;
   justify-content: center;
-  padding: 20px 10px;
+  padding: 10px 10px;
   color: #fff;
   text-transform: uppercase;
   position: absolute;
@@ -987,12 +984,12 @@ header {
 .viewS {
   background-color: #000;
   display: flex;
-  width: 80%;
+  width: 45%;
   flex-wrap: wrap;
   opacity: 70%;
   border-radius: 20px;
   justify-content: center;
-  padding: 20px 10px;
+  padding: 10px 10px;
   color: #fff;
   text-transform: uppercase;
   position: absolute;
@@ -1064,7 +1061,8 @@ pre {
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  height: 600px;
+  height: 400px;
+  background-color: #212427;
 }
 
 .code {
@@ -1072,12 +1070,16 @@ pre {
   background-color: #000;
   box-shadow: 0 0 10px #01ff2b, 0 0 0 0, 0 0 80px #01ff2b, 0 0 0 0;
   border-radius: 15px;
+  font-weight: 400;
+  font-size: 0.7em;
 }
 
 .code-txt {
-  padding: 20px 30px;
+  padding: 0px 30px;
   width: auto;
   margin-bottom: 30px;
+  color: grey;
+  font-size: 12px;
 }
 
 .contact {
@@ -1204,6 +1206,27 @@ input:hover, textarea:hover {
   display: flex;
   flex-direction: row;
   opacity: 70%;
+}
+
+.error {
+  display: none;
+  justify-content: right;
+  float: right;
+  background-color: darkred;
+  color: red;
+  border-radius: 20px;
+  padding: 20px 20px;
+  width: 80%;
+}
+
+#success-message {
+  justify-content: right;
+  float: left;
+  background-color: darkgreen;
+  color: rgb(0, 190, 0);
+  border-radius: 20px;
+  padding: 20px 20px;
+  width: 80%;
 }
 
 * {

@@ -197,7 +197,8 @@
 
                                 <div>
                                     <div class="contact-info">
-                                        <form class="contact-form">
+                                        <form class="contact-form" onsubmit="return validateForm()">
+                                            <div class="error" id="errorMessage"></div>
 
                                             <div class="contact-input">
                                                 <div class="my-message">

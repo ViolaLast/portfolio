@@ -9,12 +9,12 @@
 @mixin portBtn {
     background-color: $color-primary;
     display: flex;
-    width: 80%;
+    width: 45%;
     flex-wrap: wrap;
     opacity: 70%;
     border-radius: 20px;
     justify-content: center;
-    padding: 20px 10px;
+    padding: 10px 10px;
     color: #fff;
     text-transform: uppercase;
     position: absolute;

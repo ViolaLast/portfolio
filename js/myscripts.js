@@ -22,21 +22,42 @@ function validateForm() {
     var email = document.getElementById('email').value;
     var subject = document.getElementById('subject').value;
     var message = document.getElementById('contact-message').value;
+    var errorMessage = document.getElementById('errorMessage');
 
-    // =============================================Check if required fields are empty
-    if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || message.trim() === '') {
-        alert('Please fill in all required fields.');
-        return;
+    // Reset previous error messages and hide the error div
+    errorMessage.innerHTML = '';
+    errorMessage.style.display = 'none';
+
+    // Check if required fields are empty
+    if (firstName.trim() === '') {
+        errorMessage.innerHTML += '<div class="error-message">First Name is required.</div>';
+    }
+    if (lastName.trim() === '') {
+        errorMessage.innerHTML += '<div class="error-message">Last Name is required.</div>';
+    }
+    if (email.trim() === '') {
+        errorMessage.innerHTML += '<div class="error-message">Email is required.</div>';
+    }
+    if (message.trim() === '') {
+        errorMessage.innerHTML += '<div class="error-message">Message is required.</div>';
     }
 
-    //======================================== Validate email using regex
+    // Validate email using regex
     var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address.');
-        return;
+        errorMessage.innerHTML += '<div class="error-message">Please enter a valid email address.</div>';
     }
-    alert('Form submitted successfully!');
+
+    // If there are error messages, display the error div
+    if (errorMessage.innerHTML !== '') {
+        errorMessage.style.display = 'block';
+        return false;
+    }
+
+    // Form submitted successfully
+    return true;
 }
+
 //=====================================================================Typing Effect
 
 const dynamicText = document.querySelector(".dynamic-txts li span");
@@ -71,3 +92,22 @@ const typeEffect = () => {
 
 document.addEventListener("DOMContentLoaded", typeEffect);
 
+//=========================================================================================================================================================
+
+// Check if the form has been submitted successfully
+    var successMessage = "<?php echo !empty($success_message) ? 'true' : 'false'; ?>";
+
+    // If the form was submitted successfully, clear the form fields
+    if (successMessage === 'true') {
+        document.getElementById("contactForm").reset();
+    }
+
+    function clearFormFields() {
+
+        document.getElementById('contact-form').reset();
+    }
+
+    window.onload = function() {
+        // Clear form fields on page reload
+        document.getElementById('contact-form').reset();
+    }

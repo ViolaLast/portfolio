@@ -94,12 +94,9 @@
     max-width: 340px;
   }
   .project {
-    width: 30% !important;
+    width: 45% !important;
     margin: 20px !important;
     align-self: stretch;
-  }
-  .contact-input input, textarea {
-    width: 100% !important;
   }
   .m1200 {
     max-width: 1200px;
