@@ -12,18 +12,28 @@
 
                                 <div>
                                     <div class="contact-info">
+                                    <!-- <?php include 'dbconnect.php';?> -->
+                                    <?php include 'emailto.php';?>  
                                         <form class="contact-form" id="contact-form" onsubmit="return validateForm()"  method="post" action="">
 
                                         <div class="messages">
-    <div class="error" id="errorMessage">
-        <!-- Display error messages here -->
-    </div>
-    <div id="success-message" style="display: <?php echo !empty($success_message) ? 'block' : 'none'; ?>">
-        <?php if (!empty($success_message)): ?>
-            <div class="success-message"><?php echo $success_message; ?></div>
-        <?php endif; ?>
-    </div>
+                                            <div class="error" id="errorMessage" style="display: <?php echo !empty($errorMessage) ? 'block' : 'none'; ?>">
+    <?php 
+    // Display error messages here
+    if (!empty($errorMessage)) {
+        echo $errorMessage;
+    }
+    ?>
 </div>
+<div id="success-message" style="display: <?php echo !empty($successMessage) ? 'block' : 'none'; ?>">
+    <?php 
+    // Display success message here
+    if (!empty($successMessage)) {
+        echo $successMessage;
+    }
+    ?>
+</div>
+                                            </div>
 
                                             <div class="contact-input">
                                                 <div class="my-message">
@@ -34,15 +44,15 @@
                                                 </div>
 
                                                 <div class="form-input" >
-                                                    <input type="text" id="first-name" name="first_name" placeholder="First name*" required >
-                                                    <input type="text" id="last-name" name="last_name" placeholder="Last name*" required  >
+                                                    <input type="text" id="first-name" name="first_name" placeholder="First name*">
+                                                    <input type="text" id="last-name" name="last_name" placeholder="Last name*">
                                 
-                                                    <input type="email" id="email" name="email" placeholder="Email address*" required >
-                                                    <input type="text" id="subject" name="subject" placeholder="Subject" >
+                                                    <input type="email" id="email" name="email" placeholder="Email address*">
+                                                    <input type="text" id="subject" name="subject" placeholder="Subject">
 
-                                                    <textarea id="contact-message" name="message" placeholder="Message*" required ></textarea>
+                                                    <textarea id="contact-message" name="message" placeholder="Message*"></textarea>
                                             
-                                                    <button class="submit" type="submit" onclick="validateForm()"><b>Submit</b></button>
+                                                    <button class="submit" type="submit"><b>Submit</b></button>
                                                 </div>
                                             </div>
                                         </form>    

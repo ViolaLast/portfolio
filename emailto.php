@@ -1,50 +1,46 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 require 'vendor/autoload.php'; // Include PHPMailer autoloader
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer-master/src/Exception.php';
-require 'PHPMailer-master/src/PHPMailer.php';
-require 'PHPMailer-master/src/SMTP.php';
-
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
- include '.gitignore';
+require '/home/violetalast/public_html/PHPMailer-master/src/Exception.php';
+require '/home/violetalast/public_html/PHPMailer-master/src/PHPMailer.php';
+require '/home/violetalast/public_html/PHPMailer-master/src/SMTP.php';
 
 // Create a new PHPMailer instance
 $mail = new PHPMailer(true);
 
-            // Initialize the success message variable
-            $success_message = "";
-            $errors = array();
+// Initialize the success message variable
+$success_message = "";
+$errors = array();
 
-    try {
+try {
     // Configure SMTP settings
     $mail->isSMTP();
-    $mail->Host       = $_ENV['SMTP_HOST'];
+    $mail->Host       = 'live.smtp.mailtrap.io';
     $mail->SMTPAuth   = true;
-    $mail->Username   = $_ENV['SMTP_USERNAME'];
-    $mail->Password   = $_ENV['SMTP_PASSWORD'];
-    $mail->SMTPSecure = $_ENV['SMTP_ENCRYPTION'];
-    $mail->Port       = $_ENV['SMTP_PORT'];
+    $mail->Username   = 'api';;
+    $mail->Password   = 'b83dba9af4c87b78a5a663a515d86ff6';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;   
 
 } catch (Exception $e) {
     // Handle PHPMailer exception
     echo "Oops! Something went wrong while configuring SMTP settings: " . $e->getMessage();
     exit();
 }
-//===============================================================ENV CONNECTION END=======================================================//
-    // Function to sanitize input data
-    function validate_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+
+// Function to sanitize input data
+function validate_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate form fields
@@ -67,18 +63,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($message)) {
         $errors[] = "Message is required.";
     }
-      // If there are errors, clear success message
-      if (!empty($errors)) {
+    
+    // If there are errors, clear success message
+    if (!empty($errors)) {
         $success_message = ""; 
     }
 
-//=============================================================FORM VALIDATION END=================================================//
     // If there are no errors, send email
     if (empty($errors)) {
         try {
             //Recipient
-            $mail->setFrom('vikinterior@hotmail.co.uk', 'Violeta Last');
+            $mail->setFrom('mailtrap@demomailtrap.com');
             $mail->addAddress('vikinterior@hotmail.co.uk'); // email address
+            
 
             // Content
             $mail->isHTML(true);
@@ -91,32 +88,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $mail->send();
             // success message
-            $success_message = "Form submitted successfully!";
-
-//                  // Clear form data after successful submission
-// unset($_POST["first_name"]);
-// unset($_POST["last_name"]);
-// unset($_POST["email"]);
-// unset($_POST["subject"]);
-// unset($_POST["message"]);
-
-// Clear form data after successful submission
-$_POST = [];
-
-// Set a session variable to indicate successful submission
-$_SESSION['success'] = true;
-
-//         // After sending the email successfully
-// echo '<script>window.location.href = "index.php";</script>';
-
-} catch (Exception $e) {
-    echo "Oops! Something went wrong while processing your request. Please try again later.";
-    // Handle PHPMailer exception
+            $success_message = "Email submitted successfully!";
+        } catch (Exception $e) {
+            echo "Oops! Something went wrong while sending an email:" . $e->getMessage();
+            // Handle PHPMailer exception
+        }
+    }
 }
-} else {
-// Display validation errors
-foreach ($errors as $error) {
-    echo $error . "<br>";
-}
-}
-}
+

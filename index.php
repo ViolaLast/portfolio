@@ -3,7 +3,6 @@
 <?php include 'head.php';?>
 
     <body>
-    <?php include 'emailto.php';?>
     <?php include 'sidebar.php';?>
 <!--==========================================================================BACKGROUND==================================================-->       
         <div class="background">
@@ -170,12 +169,13 @@
                             <img src="images/netmatters clone.png" class="netmatters" title="netmatters website replica">
                                 <div class="description">
                                             <h3>Netmatters</h3>
-                                            <p class="summary">Recreated the Netmatters homepage using HTML, SCSS and JavaScript...</p>
+                                            <p class="summary">Recreated the Netmatters homepage using HTML,SCSS, JavaScript and PHP...</p>
                                     <div>
                                         <ul class="list">
                                             <li class="h">HTML</li>
                                             <li class="s">SCSS</li>
                                             <li class="j">JavaScript</li>
+                                            <li class="p">PHP</li>
                                         </ul>
                                             <div class="buttons">
                                                 <button class="view"><a href="https://netmatters.violeta-last.netmatters-scs.co.uk" target="_blank" class="d-btn">

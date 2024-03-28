@@ -16,47 +16,45 @@ $(document).ready(function() {
 //   });
 
 //========================================================Form validation===========================================================//
-function validateForm() {
-    var firstName = document.getElementById('first-name').value;
-    var lastName = document.getElementById('last-name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('contact-message').value;
-    var errorMessage = document.getElementById('errorMessage');
+$(document).ready(function() {
+    // Add event listeners for input fields
+    $("#first-name, #last-name, #email, #message").on("input", function() {
+        validateInput($(this));
+    });
 
-    // Reset previous error messages and hide the error div
-    errorMessage.innerHTML = '';
-    errorMessage.style.display = 'none';
+    // Function to validate input fields
+    function validateInput(input) {
+        // Remove error border initially
+        input.removeClass("error-border");
 
-    // Check if required fields are empty
-    if (firstName.trim() === '') {
-        errorMessage.innerHTML += '<div class="error-message">First Name is required.</div>';
-    }
-    if (lastName.trim() === '') {
-        errorMessage.innerHTML += '<div class="error-message">Last Name is required.</div>';
-    }
-    if (email.trim() === '') {
-        errorMessage.innerHTML += '<div class="error-message">Email is required.</div>';
-    }
-    if (message.trim() === '') {
-        errorMessage.innerHTML += '<div class="error-message">Message is required.</div>';
-    }
-
-    // Validate email using regex
-    var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!emailRegex.test(email)) {
-        errorMessage.innerHTML += '<div class="error-message">Please enter a valid email address.</div>';
-    }
-
-    // If there are error messages, display the error div
-    if (errorMessage.innerHTML !== '') {
-        errorMessage.style.display = 'block';
-        return false;
+        // Perform validation based on input field ID
+        switch (input.attr("id")) {
+            case "first-name":
+            case "last-name":
+                if (!input.val().trim()) {
+                    input.addClass("error-border");
+                }
+                break;
+            case "email":
+                if (!isValidEmailAddress(input.val().trim())) {
+                    input.addClass("error-border");
+                }
+                break;
+            case "message":
+                if (!input.val().trim()) {
+                    input.addClass("error-border");
+                }
+                break;
+        }
     }
 
-    // Form submitted successfully
-    return true;
-}
+    // Function to validate email format
+    function isValidEmailAddress(email) {
+        var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailRegex.test(email);
+    }
+});
+
 
 //=====================================================================Typing Effect
 
@@ -93,19 +91,4 @@ const typeEffect = () => {
 document.addEventListener("DOMContentLoaded", typeEffect);
 
 //=========================================================================================================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Clear form fields
-    document.getElementById('contact-form').reset();
-    
-    // Check if there is a success message in the session
-    const successMessage = "<?php echo isset($_SESSION['success']) && $_SESSION['success'] ? 'true' : 'false'; ?>";
-    if (successMessage === 'true') {
-        // Display success message
-        // For example, you can show an alert
-        alert('Form submitted successfully!');
-        // Clear the session variable
-        <?php unset($_SESSION['success']); ?>
-    }
-});
     

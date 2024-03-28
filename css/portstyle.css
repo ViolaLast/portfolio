@@ -1212,11 +1212,10 @@ input:hover, textarea:hover {
 }
 
 .error {
-  display: none;
   justify-content: right;
   float: right;
   background-color: darkred;
-  color: red;
+  color: white;
   border-radius: 20px;
   padding: 20px 20px;
   width: 80%;
@@ -1226,10 +1225,14 @@ input:hover, textarea:hover {
   justify-content: right;
   float: left;
   background-color: darkgreen;
-  color: rgb(0, 190, 0);
+  color: rgb(0, 0, 0);
   border-radius: 20px;
   padding: 20px 20px;
   width: 80%;
+}
+
+.error-border {
+  border: 2px solid red !important;
 }
 
 * {
@@ -1283,6 +1286,10 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 h2 {
